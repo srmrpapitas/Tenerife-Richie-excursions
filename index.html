@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tenerife Richie Excursions — Best Tours, Watersports & Adventures</title>
+<meta name="description" content="Book the best excursions in Tenerife: Teide & Masca, whale & dolphin watching, jet ski, parasailing, Siam Park, Loro Parque, buggy safari and more. Reserve via WhatsApp." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --aqua-50:#e6fbff;
+    --aqua-100:#b8f3ff;
+    --aqua-300:#5fdcf3;
+    --aqua-500:#06b6d4;
+    --aqua-600:#0891b2;
+    --aqua-700:#0e7490;
+    --aqua-900:#083344;
+    --orange-300:#ffb86b;
+    --orange-500:#ff7a18;
+    --orange-600:#ea580c;
+    --sand:#fff6ec;
+    --ink:#0b1f2a;
+    --ink-soft:#2a4452;
+    --white:#ffffff;
+    --shadow-soft: 0 10px 30px rgba(8,51,68,.08);
+    --shadow-bold: 0 25px 60px -10px rgba(8,51,68,.25);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Outfit',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--sand);
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;letter-spacing:-0.02em;line-height:1.05}
+  a{color:inherit;text-decoration:none}
+  img,video{display:block;max-width:100%}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+  /* ========== NAVBAR ========== */
+  .nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    padding:14px 32px;
+    display:flex;align-items:center;justify-content:space-between;
+    background:rgba(255,246,236,.85);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(8,51,68,.06);
+    transition:padding .3s ease;
+  }
+  .nav.scrolled{padding:10px 32px}
+  .nav.scrolled .logo-mark{width:52px;height:52px}
+  .logo{display:flex;align-items:center;gap:14px;font-weight:800;font-size:1.25rem}
+  .logo-mark{
+    width:64px;height:64px;border-radius:50%;
+    background-size:cover;background-position:center top;
+    border:3px solid var(--orange-500);
+    box-shadow:0 8px 24px rgba(255,122,24,.4), 0 0 0 2px white inset;
+    flex-shrink:0;
+    transition:transform .3s ease;
+  }
+  .logo:hover .logo-mark{transform:scale(1.05) rotate(-3deg)}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text small{font-family:'Outfit';font-weight:500;font-size:.65rem;letter-spacing:.18em;color:var(--aqua-700);text-transform:uppercase;margin-top:3px}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{font-weight:500;font-size:.95rem;position:relative;transition:color .2s}
+  .nav-links a:hover{color:var(--orange-600)}
+  .nav-links a::after{
+    content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;
+    background:var(--orange-500);transform:scaleX(0);transform-origin:left;
+    transition:transform .3s ease;
+  }
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav-cta{
+    background:var(--ink);color:white;padding:11px 22px;border-radius:999px;
+    font-weight:600;font-size:.9rem;display:flex;align-items:center;gap:8px;
+    transition:transform .2s, background .2s;
+  }
+  .nav-cta:hover{background:var(--orange-600);transform:translateY(-2px)}
+  .nav-toggle{display:none;flex-direction:column;gap:5px;width:32px;height:32px;justify-content:center;align-items:center}
+  .nav-toggle span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+  /* ========== HERO ========== */
+  .hero{
+    position:relative;min-height:100vh;
+    display:flex;align-items:center;
+    padding:120px 32px 60px;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(255,184,107,.35), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(95,220,243,.4), transparent 50%),
+      linear-gradient(180deg, #e6fbff 0%, #fff6ec 100%);
+  }
+  .hero-bg-video{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;
+    opacity:.35;
+    z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(230,251,255,.4) 0%, rgba(255,246,236,.85) 100%);
+    z-index:1;
+  }
+  .hero-inner{position:relative;z-index:2;width:100%;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center}
+  .hero-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:8px 16px;border-radius:999px;
+    background:white;border:1px solid rgba(8,51,68,.08);
+    font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--aqua-700);box-shadow:var(--shadow-soft);margin-bottom:24px;
+  }
+  .hero-eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--orange-500);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+  .hero h1{
+    font-size:clamp(2.6rem,6vw,5rem);
+    font-weight:900;
+    margin-bottom:24px;
+  }
+  .hero h1 .accent{
+    background:linear-gradient(120deg,var(--orange-500),var(--aqua-600));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    font-style:italic;
+  }
+  .hero p.lead{
+    font-size:1.15rem;color:var(--ink-soft);max-width:520px;margin-bottom:34px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .btn-primary{
+    background:var(--orange-500);color:white;padding:16px 28px;border-radius:999px;
+    font-weight:600;display:inline-flex;align-items:center;gap:10px;
+    box-shadow:0 12px 30px -6px rgba(255,122,24,.5);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 40px -8px rgba(255,122,24,.6)}
+  .btn-ghost{
+    background:white;color:var(--ink);padding:16px 28px;border-radius:999px;
+    font-weight:600;display:inline-flex;align-items:center;gap:10px;
+    border:1px solid rgba(8,51,68,.08);
+  }
+  .btn-ghost:hover{border-color:var(--ink)}
+
+  .hero-stats{display:flex;gap:32px;margin-top:42px;flex-wrap:wrap}
+  .hero-stats .stat strong{display:block;font-family:'Fraunces';font-size:2rem;font-weight:800;color:var(--ink)}
+  .hero-stats .stat span{font-size:.85rem;color:var(--ink-soft)}
+
+  /* HERO COLLAGE */
+  .hero-visual{position:relative;height:560px}
+  .hero-card{
+    position:absolute;border-radius:var(--radius-lg);overflow:hidden;
+    box-shadow:var(--shadow-bold);
+    transition:transform .5s ease;
+  }
+  .hero-card video, .hero-card img{width:100%;height:100%;object-fit:cover}
+  .hc-1{top:0;left:10%;width:55%;height:65%;animation:float1 6s ease-in-out infinite}
+  .hc-2{bottom:0;right:0;width:50%;height:55%;animation:float2 7s ease-in-out infinite}
+  .hc-3{top:30%;right:5%;width:38%;height:30%;background:var(--aqua-500);color:white;
+    display:flex;flex-direction:column;justify-content:center;padding:24px;
+    animation:float3 5s ease-in-out infinite}
+  .hc-3 strong{font-family:'Fraunces';font-size:2.2rem;font-weight:900;line-height:1}
+  .hc-3 span{font-size:.85rem;opacity:.9;margin-top:6px}
+  .hc-3 .stars{margin-top:10px;color:#ffd166;font-size:1rem;letter-spacing:2px}
+  @keyframes float1{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  @keyframes float2{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
+  @keyframes float3{0%,100%{transform:translate(0,0) rotate(-2deg)}50%{transform:translate(0,-8px) rotate(-2deg)}}
+
+  /* ========== MARQUEE STRIP ========== */
+  .marquee{
+    background:var(--ink);color:white;padding:18px 0;overflow:hidden;
+    border-top:3px solid var(--orange-500);
+  }
+  .marquee-track{display:flex;gap:60px;animation:scroll 30s linear infinite;white-space:nowrap;font-family:'Fraunces';font-style:italic;font-size:1.4rem;font-weight:600}
+  .marquee-track span{display:inline-flex;align-items:center;gap:60px}
+  .marquee-track .dot{color:var(--orange-500)}
+  @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+  /* ========== SECTIONS BASE ========== */
+  section{padding:90px 32px}
+  .container{max-width:1280px;margin:0 auto}
+  .section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:48px;gap:32px;flex-wrap:wrap}
+  .section-head .label{
+    font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange-600);
+    font-weight:600;margin-bottom:10px;display:block;
+  }
+  .section-head h2{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;max-width:700px}
+  .section-head h2 em{color:var(--aqua-600);font-style:italic}
+  .section-head p{color:var(--ink-soft);max-width:420px;font-size:1rem}
+
+  /* ========== BEST SELLERS ========== */
+  .bestsellers{background:linear-gradient(180deg,var(--sand) 0%, white 100%)}
+  .bs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .bs-card{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;aspect-ratio:3/4;
+    box-shadow:var(--shadow-soft);
+    transition:transform .4s ease, box-shadow .4s ease;cursor:pointer;
+  }
+  .bs-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-bold)}
+  .bs-card video, .bs-card img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:transform 1.2s ease;
+  }
+  .bs-card:hover video, .bs-card:hover img{transform:scale(1.08)}
+  .bs-card .overlay{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,transparent 30%, rgba(8,31,42,.85) 100%);
+  }
+  .bs-card .content{
+    position:absolute;left:0;right:0;bottom:0;padding:24px;color:white;z-index:2;
+  }
+  .bs-card .badge{
+    display:inline-block;padding:5px 12px;background:var(--orange-500);border-radius:999px;
+    font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;
+  }
+  .bs-card h3{font-size:1.6rem;font-weight:800;margin-bottom:6px}
+  .bs-card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:.9rem}
+  .bs-card .price{font-family:'Fraunces';font-weight:800;font-size:1.4rem}
+
+  /* ========== EXCURSIONS GRID ========== */
+  .excursions{
+    background:white;
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+  }
+  /* Video background for excursions section — subtle, behind everything */
+  .excursions-bg{
+    position:absolute;inset:0;z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .excursions-bg video{
+    width:100%;height:100%;object-fit:cover;
+    opacity:0.18; /* 18% — sutil pero visible */
+  }
+  /* White overlay to keep cards readable */
+  .excursions-bg::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,.35) 50%, rgba(255,255,255,.55) 100%);
+    pointer-events:none;
+  }
+  .excursions > .container{position:relative;z-index:1}
+  .filter-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+  .filter-tabs button{
+    padding:10px 20px;border-radius:999px;background:var(--sand);color:var(--ink);
+    font-weight:500;font-size:.9rem;transition:all .2s;
+  }
+  .filter-tabs button.active{background:var(--ink);color:white}
+  .filter-tabs button:hover:not(.active){background:rgba(8,51,68,.08)}
+
+  .ex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .ex-card{
+    border-radius:var(--radius-lg);overflow:hidden;background:white;
+    border:1px solid rgba(8,51,68,.06);
+    box-shadow:var(--shadow-soft);
+    transition:transform .35s ease, box-shadow .35s ease;
+    display:flex;flex-direction:column;
+  }
+  .ex-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-bold)}
+  .ex-media{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--aqua-100)}
+  .ex-media video, .ex-media img{width:100%;height:100%;object-fit:cover}
+  .ex-tag{
+    position:absolute;top:14px;left:14px;background:white;color:var(--ink);
+    padding:6px 14px;border-radius:999px;font-size:.75rem;font-weight:600;
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+  .ex-tag.hot{background:var(--orange-500);color:white}
+  .ex-tag.new{background:var(--aqua-500);color:white}
+  .ex-body{padding:22px;flex:1;display:flex;flex-direction:column}
+  .ex-body h3{font-size:1.4rem;font-weight:800;margin-bottom:8px}
+  .ex-body .desc{color:var(--ink-soft);font-size:.92rem;margin-bottom:14px;flex:1}
+  .ex-meta{display:flex;gap:14px;font-size:.85rem;color:var(--ink-soft);margin-bottom:16px}
+  .ex-meta span{display:flex;align-items:center;gap:5px}
+  .ex-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(8,51,68,.06);padding-top:16px}
+  .ex-price{font-family:'Fraunces';font-size:1.6rem;font-weight:800;color:var(--ink)}
+  .ex-price small{font-family:'Outfit';font-weight:400;font-size:.75rem;color:var(--ink-soft);margin-left:4px}
+  .ex-book{
+    background:var(--ink);color:white;padding:10px 18px;border-radius:999px;
+    font-weight:600;font-size:.85rem;transition:background .2s;
+  }
+  .ex-book:hover{background:var(--orange-500)}
+
+  /* ========== PARK TICKETS ========== */
+  .parks{
+    background:linear-gradient(135deg,var(--aqua-700),var(--aqua-500));
+    color:white;position:relative;overflow:hidden;
+  }
+  .parks::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 20%, rgba(255,122,24,.3), transparent 50%);
+  }
+  .parks .container{position:relative;z-index:2}
+  .parks .section-head .label{color:var(--orange-300)}
+  .parks .section-head h2{color:white}
+  .parks .section-head h2 em{color:var(--orange-300)}
+  .parks .section-head p{color:rgba(255,255,255,.8)}
+  .parks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .park-card{
+    background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:var(--radius-lg);padding:32px;
+    transition:transform .35s ease, background .35s ease;
+  }
+  .park-card.featured{background:white;color:var(--ink);transform:scale(1.03)}
+  .park-card:hover{transform:translateY(-6px)}
+  .park-card.featured:hover{transform:translateY(-6px) scale(1.03)}
+  .park-card .ribbon{
+    display:inline-block;background:var(--orange-500);color:white;
+    padding:5px 14px;border-radius:999px;font-size:.7rem;font-weight:700;
+    letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px;
+  }
+  .park-card h3{font-size:1.8rem;font-weight:800;margin-bottom:6px}
+  .park-card .sub{font-size:.95rem;opacity:.75;margin-bottom:24px}
+  .park-card .price-big{font-family:'Fraunces';font-size:3rem;font-weight:900;line-height:1}
+  .park-card .price-big small{font-family:'Outfit';font-size:.85rem;font-weight:400;opacity:.7;margin-left:6px}
+  .park-card ul{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:10px}
+  .park-card li{font-size:.92rem;display:flex;align-items:start;gap:10px;opacity:.9}
+  .park-card li::before{content:'✓';color:var(--orange-300);font-weight:800;flex-shrink:0}
+  .park-card.featured li::before{color:var(--orange-500)}
+  .park-card .btn-primary{width:100%;justify-content:center}
+
+  /* ========== WHALES SECTION ========== */
+  .whales{
+    background:var(--ink);color:white;
+    padding:0;
+  }
+  .whales-grid{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;min-height:520px}
+  .whales-text{padding:90px 60px;display:flex;flex-direction:column;justify-content:center}
+  .whales-text .label{color:var(--aqua-300)}
+  .whales-text h2{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;margin-bottom:20px}
+  .whales-text h2 em{color:var(--aqua-300);font-style:italic}
+  .whales-text p{color:rgba(255,255,255,.75);margin-bottom:24px;font-size:1.05rem;max-width:480px}
+  .whales-options{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:480px;margin-bottom:30px}
+  .whale-opt{
+    background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
+    padding:18px;border-radius:var(--radius-md);
+  }
+  .whale-opt strong{display:block;font-family:'Fraunces';font-size:1.2rem;margin-bottom:4px}
+  .whale-opt span{font-size:.85rem;opacity:.7}
+  .whale-opt .price{font-family:'Fraunces';font-size:1.5rem;font-weight:800;color:var(--orange-300);margin-top:8px;display:block}
+  .whales-media{position:relative;overflow:hidden}
+  .whales-media video, .whales-media img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+
+  /* ========== REVIEWS ========== */
+  .reviews{background:var(--sand)}
+  .reviews-head{text-align:center;margin-bottom:50px}
+  .reviews-head .label{color:var(--orange-600)}
+  .reviews-head h2{font-size:clamp(2rem,4vw,3.3rem);font-weight:800;margin-bottom:14px}
+  .reviews-rating{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}
+  .reviews-rating .big{font-family:'Fraunces';font-size:3rem;font-weight:900;line-height:1}
+  .reviews-rating .stars{color:#fbbf24;font-size:1.3rem;letter-spacing:3px}
+  .reviews-rating .meta{font-size:.9rem;color:var(--ink-soft)}
+  .reviews-rating .google-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:8px 14px;background:white;border-radius:999px;
+    font-size:.85rem;font-weight:600;box-shadow:var(--shadow-soft);
+  }
+  .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .review-card{
+    background:white;border-radius:var(--radius-md);padding:26px;
+    box-shadow:var(--shadow-soft);
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .review-card .stars{color:#fbbf24;font-size:1rem;letter-spacing:2px}
+  .review-card p{color:var(--ink-soft);font-size:.95rem;line-height:1.6;flex:1}
+  .review-card .author{display:flex;align-items:center;gap:12px;margin-top:auto}
+  .review-card .avatar{
+    width:42px;height:42px;border-radius:50%;
+    display:grid;place-items:center;color:white;font-weight:700;font-size:.9rem;
+  }
+  .review-card .author strong{display:block;font-size:.95rem}
+  .review-card .author span{font-size:.8rem;color:var(--ink-soft)}
+
+  /* ========== CTA / FOOTER ========== */
+  .footer-cta{
+    background:linear-gradient(135deg,var(--orange-500),var(--orange-600));
+    color:white;padding:80px 32px;text-align:center;
+  }
+  .footer-cta h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;margin-bottom:18px}
+  .footer-cta p{font-size:1.1rem;opacity:.92;margin-bottom:30px;max-width:520px;margin-left:auto;margin-right:auto}
+  .footer-cta .btn-primary{background:var(--ink);box-shadow:0 12px 30px rgba(0,0,0,.25)}
+  .footer-cta .btn-primary:hover{background:white;color:var(--ink)}
+
+  footer{background:var(--ink);color:white;padding:60px 32px 30px}
+  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;max-width:1280px;margin:0 auto}
+  .foot-col h4{font-size:.85rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:18px;color:var(--orange-300)}
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot-col li{font-size:.9rem;opacity:.8;transition:opacity .2s}
+  .foot-col li:hover{opacity:1;color:var(--orange-300)}
+  .foot-col p{font-size:.9rem;opacity:.75;margin-top:14px;max-width:340px}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;margin-top:50px;max-width:1280px;margin-left:auto;margin-right:auto;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.85rem;opacity:.7}
+
+  /* ========== BOOKING MODAL ========== */
+  .modal-backdrop{
+    position:fixed;inset:0;z-index:1000;
+    background:rgba(5,15,22,.82);backdrop-filter:blur(6px);
+    display:none;align-items:center;justify-content:center;padding:20px;
+    opacity:0;transition:opacity .25s ease;
+  }
+  .modal-backdrop.open{display:flex;opacity:1}
+  .modal{
+    background:white;border-radius:var(--radius-lg);
+    width:100%;max-width:520px;max-height:92vh;overflow:auto;
+    transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.2,.8,.2,1);
+  }
+  .modal-backdrop.open .modal{transform:translateY(0) scale(1)}
+  .modal-head{
+    padding:24px 28px;border-bottom:1px solid rgba(8,51,68,.08);
+    display:flex;justify-content:space-between;align-items:start;gap:16px;
+  }
+  .modal-head h3{font-size:1.5rem;font-weight:800}
+  .modal-head .ex-price{font-size:1.3rem;color:var(--orange-600);margin-top:4px;display:block}
+  .modal-close{
+    width:34px;height:34px;border-radius:50%;background:var(--sand);
+    display:grid;place-items:center;font-size:1.3rem;flex-shrink:0;
+  }
+  .modal-close:hover{background:var(--ink);color:white}
+  .modal-body{padding:24px 28px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-weight:600;font-size:.88rem;margin-bottom:8px;color:var(--ink)}
+  .field input, .field select{
+    width:100%;padding:12px 14px;border-radius:var(--radius-sm);
+    border:1.5px solid rgba(8,51,68,.12);font-size:.95rem;font-family:inherit;
+    transition:border-color .2s;background:white;
+  }
+  .field input:focus, .field select:focus{outline:none;border-color:var(--aqua-500)}
+  .qty-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .qty{display:flex;align-items:center;justify-content:space-between;background:var(--sand);border-radius:var(--radius-sm);padding:6px 8px}
+  .qty button{
+    width:30px;height:30px;border-radius:8px;background:white;
+    font-size:1.1rem;font-weight:700;color:var(--ink);
+    box-shadow:0 2px 6px rgba(0,0,0,.06);
+  }
+  .qty button:hover{background:var(--orange-500);color:white}
+  .qty .num{font-weight:700;font-size:1rem;min-width:24px;text-align:center}
+  .qty .lbl{display:block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-bottom:6px;text-align:center}
+  .total-row{
+    background:var(--sand);padding:16px 20px;border-radius:var(--radius-md);
+    display:flex;justify-content:space-between;align-items:center;margin:20px 0;
+  }
+  .total-row span{font-size:.9rem;color:var(--ink-soft)}
+  .total-row strong{font-family:'Fraunces';font-size:1.7rem;font-weight:800;color:var(--ink)}
+  .modal .btn-whatsapp{
+    width:100%;padding:16px;border-radius:var(--radius-md);
+    background:#25D366;color:white;font-weight:700;font-size:1rem;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:transform .2s;
+  }
+  .modal .btn-whatsapp:hover{transform:translateY(-2px)}
+  .modal-note{font-size:.78rem;color:var(--ink-soft);text-align:center;margin-top:12px}
+
+  /* ========== FLOATING WHATSAPP ========== */
+  .float-wa{
+    position:fixed;bottom:24px;right:24px;z-index:90;
+    width:60px;height:60px;border-radius:50%;background:#25D366;color:white;
+    display:grid;place-items:center;font-size:1.6rem;
+    box-shadow:0 10px 30px rgba(37,211,102,.4);
+    transition:transform .25s;animation:waPulse 2.5s ease-in-out infinite;
+  }
+  .float-wa:hover{transform:scale(1.1)}
+  @keyframes waPulse{0%,100%{box-shadow:0 10px 30px rgba(37,211,102,.4)}50%{box-shadow:0 10px 40px rgba(37,211,102,.7)}}
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 980px){
+    .nav{padding:14px 20px}
+    .nav-links{display:none}
+    .nav-toggle{display:flex}
+    .hero{padding:110px 20px 40px}
+    .hero-inner{grid-template-columns:1fr;gap:40px}
+    .hero-visual{height:420px}
+    section{padding:70px 20px}
+    .bs-grid{grid-template-columns:repeat(2,1fr)}
+    .ex-grid{grid-template-columns:repeat(2,1fr)}
+    .parks-grid{grid-template-columns:1fr}
+    .park-card.featured{transform:none}
+    .whales-grid{grid-template-columns:1fr}
+    .whales-text{padding:60px 24px}
+    .whales-media{min-height:340px}
+    .reviews-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
+  }
+  @media (max-width: 560px){
+    .bs-grid{grid-template-columns:1fr}
+    .ex-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .qty-row{grid-template-columns:1fr;gap:10px}
+    .whales-options{grid-template-columns:1fr}
+    .hero h1{font-size:2.4rem}
+  }
+
+  /* ========== FLAPPY GAME ========== */
+  .game-section{
+    position:relative;
+    padding:60px 32px 70px;
+    background:linear-gradient(180deg, var(--sand) 0%, #ffe6c7 50%, var(--aqua-100) 100%);
+    overflow:hidden;
+    transition:opacity .3s ease, max-height .5s ease, padding .5s ease;
+  }
+  .game-section.dismissed{
+    opacity:0;
+    max-height:0;
+    padding-top:0;
+    padding-bottom:0;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .game-head{
+    text-align:center;
+    margin-bottom:24px;
+    max-width:1280px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .game-head .label{
+    font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--orange-600);font-weight:700;display:block;margin-bottom:8px;
+  }
+  .game-head h2{
+    font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:800;
+  }
+  .game-head h2 em{color:var(--orange-500);font-style:italic}
+  .game-head p{color:var(--ink-soft);font-size:.95rem;margin-top:8px}
+
+  .game-wrap{
+    position:relative;
+    max-width:1100px;
+    margin:0 auto;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:var(--shadow-bold);
+    background:linear-gradient(180deg,#7ad7f0 0%, #b8f3ff 70%, #ffd9a8 100%);
+    aspect-ratio:16/7;
+    touch-action:manipulation;
+    user-select:none;
+    -webkit-user-select:none;
+  }
+  #flappyCanvas{
+    display:block;width:100%;height:100%;
+  }
+  .game-overlay{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;text-align:center;
+    background:rgba(8,31,42,.55);backdrop-filter:blur(4px);
+    color:white;padding:20px;z-index:5;
+    transition:opacity .25s ease;
+  }
+  .game-overlay.hidden{opacity:0;pointer-events:none}
+  .game-overlay h3{
+    font-family:'Fraunces',serif;font-size:clamp(1.6rem,3vw,2.4rem);
+    font-weight:900;margin-bottom:10px;line-height:1.1;
+  }
+  .game-overlay h3 em{color:var(--orange-300);font-style:italic}
+  .game-overlay p{font-size:.95rem;opacity:.9;max-width:380px;margin-bottom:18px}
+  .game-overlay .key{
+    display:inline-block;padding:4px 10px;border-radius:6px;
+    background:white;color:var(--ink);font-weight:700;font-family:'Outfit';
+    box-shadow:0 2px 0 rgba(0,0,0,.25);margin:0 3px;font-size:.85rem;
+  }
+  .game-btn{
+    background:var(--orange-500);color:white;padding:13px 26px;border-radius:999px;
+    font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:8px;
+    box-shadow:0 10px 24px -6px rgba(255,122,24,.5);
+    transition:transform .2s, box-shadow .2s;
+  }
+  .game-btn:hover{transform:translateY(-2px)}
+  .game-score-bar{
+    position:absolute;top:14px;left:14px;right:14px;
+    display:flex;justify-content:space-between;align-items:center;
+    z-index:4;pointer-events:none;
+    font-family:'Fraunces',serif;
+  }
+  .score-pill{
+    background:rgba(255,255,255,.92);
+    padding:8px 16px;border-radius:999px;
+    font-weight:800;font-size:1rem;color:var(--ink);
+    display:flex;align-items:center;gap:6px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+  }
+  .score-pill.tickets{color:var(--orange-600)}
+  .game-mute{
+    position:absolute;bottom:14px;right:14px;z-index:4;
+    width:36px;height:36px;border-radius:50%;
+    background:rgba(255,255,255,.9);
+    display:grid;place-items:center;font-size:1rem;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    cursor:pointer;
+  }
+  .game-mute:hover{background:white}
+  .game-final{
+    display:none;flex-direction:column;align-items:center;gap:10px;
+  }
+  .game-final.show{display:flex}
+  .game-final .row{display:flex;gap:24px;margin:8px 0 16px}
+  .game-final .row > div{text-align:center}
+  .game-final .row strong{display:block;font-family:'Fraunces';font-size:2rem;font-weight:900;color:var(--orange-300)}
+  .game-final .row span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+  .game-cta-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+  .game-cta-row .ghost{
+    background:transparent;color:white;padding:13px 22px;border-radius:999px;
+    font-weight:600;font-size:.9rem;border:1.5px solid rgba(255,255,255,.4);
+  }
+  .game-cta-row .ghost:hover{border-color:white;background:rgba(255,255,255,.1)}
+
+  @media (max-width:560px){
+    .game-section{padding:40px 16px 50px}
+    .game-wrap{aspect-ratio:5/4}
+    .game-overlay p{font-size:.88rem}
+  }
+
+
+  /* ========== YOUTUBE BACKGROUND EMBEDS ========== */
+  .yt-bg{
+    position:absolute;inset:0;overflow:hidden;
+    background:#0e7490;
+    pointer-events:none; /* clicks go through to underlying buttons */
+  }
+  .yt-bg .yt-iframe{
+    position:absolute;
+    /* Scale up so YouTube branding overflows outside the visible frame */
+    top:50%;left:50%;
+    width:177.77vw; /* 16:9 expressed in vw, recalculated below for cards */
+    height:100vw;
+    transform:translate(-50%,-50%) scale(1.35);
+    transform-origin:center;
+    pointer-events:none;
+    border:0;
+  }
+  /* For cards (smaller), lock the iframe to the container */
+  .ex-media .yt-bg .yt-iframe,
+  .bs-card .yt-bg .yt-iframe,
+  .hero-card .yt-bg .yt-iframe{
+    width:100%;height:100%;
+    min-width:100%;min-height:100%;
+    /* Use aspect-ratio scaling: 16:9 video in any container — scale 1.6x to crop letterboxes + branding */
+    transform:translate(-50%,-50%) scale(1.6);
+  }
+  /* Transparent shield over the iframe — blocks any leftover hover tooltips */
+  .yt-bg .yt-shield{
+    position:absolute;inset:0;z-index:2;
+    pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%);
+  }
+  /* Card containers using YouTube need their video position to be relative */
+  .ex-media{position:relative}
+
+
+  .hero-bg-video-wrap{
+    position:absolute;inset:0;z-index:0;opacity:.55;pointer-events:none;
+  }
+  .hero-bg-video-wrap .yt-bg{position:absolute;inset:0}
+  .hero-bg-video-wrap .yt-iframe{
+    position:absolute;top:50%;left:50%;
+    width:120vw;height:67.5vw; /* 16:9 ratio */
+    min-width:177vh;min-height:100vh;
+    transform:translate(-50%,-50%) scale(1.2);
+  }
+
+
+  /* While YT iframes load, the poster (background-image) shows. Once playing, the iframe overlays it. */
+  .yt-bg iframe{ background:transparent }
+
+
+  /* Hero local mp4 background */
+  .hero-bg-video{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;z-index:0;opacity:.55;pointer-events:none;
+  }
+
+
+  .park-media{
+    position:relative;width:100%;aspect-ratio:16/9;
+    border-radius:18px;overflow:hidden;
+    margin-bottom:18px;
+    background:rgba(255,255,255,.1);
+  }
+  .park-media .yt-bg{position:absolute;inset:0}
+  .park-media img.park-poster{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  }
+
+
+  /* Maxicat 3-image gallery */
+  .maxicat-gallery{position:absolute;inset:0;overflow:hidden}
+  .mg-stage{position:absolute;inset:0;overflow:hidden}
+  .mg-img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    opacity:0;transition:opacity .35s ease;z-index:3;pointer-events:none;
+  }
+  .mg-img-active{opacity:1}
+  .mg-stage .yt-bg{z-index:1}
+  .mg-thumbs{
+    position:absolute;bottom:10px;left:10px;display:flex;gap:6px;z-index:5;
+  }
+  .mg-thumb{
+    width:46px;height:32px;border-radius:6px;
+    background-size:cover;background-position:center;
+    border:2px solid rgba(255,255,255,.6);
+    cursor:pointer;transition:transform .2s, border-color .2s;
+  }
+  .mg-thumb:hover{transform:scale(1.08);border-color:white}
+  .mg-thumb-active{border-color:var(--orange-500);transform:scale(1.05)}
+
+
+  /* Modal video at top */
+  .modal{max-width:560px}
+  .modal-video{
+    width:100%;aspect-ratio:16/9;background:#000;overflow:hidden;
+    position:relative;
+    border-top-left-radius:var(--radius-lg);
+    border-top-right-radius:var(--radius-lg);
+  }
+  .modal-video iframe{
+    position:absolute;top:50%;left:50%;
+    width:100%;height:100%;
+    transform:translate(-50%,-50%) scale(1.6);
+    border:0;pointer-events:none;
+  }
+  .modal-video .placeholder{
+    position:absolute;inset:0;
+    background-size:cover;background-position:center;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="nav" id="nav">
+  <a href="#" class="logo">
+    <span class="logo-mark" style="background-image:url('data:image/webp;base64,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')" aria-label="Richie"></span>
+    <span class="logo-text">
+      Tenerife Richie
+      <small>Excursions</small>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="#bestsellers">Best Sellers</a>
+    <a href="#excursions">Excursions</a>
+    <a href="#parks">Parks</a>
+    <a href="#whales">Whales & Dolphins</a>
+    <a href="#reviews">Reviews</a>
+  </div>
+  <a href="https://wa.me/447861305822" target="_blank" rel="noopener" class="nav-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+    Book on WhatsApp
+  </a>
+  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="images/trailer1-poster.jpg">
+    <source src="videos/trailer1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow"><span class="dot"></span> Live bookings on WhatsApp</div>
+      <h1>Discover <span class="accent">Tenerife</span> like never before.</h1>
+      <p class="lead">From the volcanic peaks of Mount Teide to the wild Atlantic — handpicked excursions, watersports and park tickets at unbeatable prices. Reserve in seconds, pay on the day.</p>
+      <div class="hero-ctas">
+        <a href="#excursions" class="btn-primary">Browse Excursions →</a>
+        <a href="https://wa.me/447861305822" target="_blank" rel="noopener" class="btn-ghost">Chat with Richie</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>15+</strong><span>Top excursions</span></div>
+        <div class="stat"><strong>4.9★</strong><span>Google reviews</span></div>
+        <div class="stat"><strong>10k+</strong><span>Happy guests</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card hc-1">
+        <div class="yt-bg" style="background-image:url('https://i.ytimg.com/vi/BSd7KIU-mbM/maxresdefault.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/BSd7KIU-mbM?autoplay=1&mute=1&loop=1&playlist=BSd7KIU-mbM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="hc-1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+      </div>
+      <div class="hero-card hc-2">
+        <div class="yt-bg" style="background-image:url('https://i.ytimg.com/vi/yifc2_Yj3_4/maxresdefault.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/yifc2_Yj3_4?autoplay=1&mute=1&loop=1&playlist=yifc2_Yj3_4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="hc-2" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+      </div>
+      <div class="hero-card hc-3">
+        <strong>4.9</strong>
+        <div class="stars">★★★★★</div>
+        <span>Based on 1,200+ Google reviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Teide & Masca <em class="dot">●</em> Jet Ski <em class="dot">●</em> Whale Watching <em class="dot">●</em> Buggy Safari <em class="dot">●</em> Parasailing <em class="dot">●</em> Siam Park <em class="dot">●</em> Loro Parque <em class="dot">●</em> Yacht Charter <em class="dot">●</em></span>
+    <span>Teide & Masca <em class="dot">●</em> Jet Ski <em class="dot">●</em> Whale Watching <em class="dot">●</em> Buggy Safari <em class="dot">●</em> Parasailing <em class="dot">●</em> Siam Park <em class="dot">●</em> Loro Parque <em class="dot">●</em> Yacht Charter <em class="dot">●</em></span>
+  </div>
+</div>
+
+
+<!-- ============ FLAPPY GAME ============ -->
+<section class="game-section" id="gameSection" aria-label="Tenerife Richie mini-game">
+  <div class="game-head">
+    <span class="label">Mini Game · For Fun</span>
+    <h2>Catch the <em>Excursion Tickets!</em> 🎟️</h2>
+    <p>Press <span style="background:white;border:1px solid rgba(0,0,0,.08);padding:2px 8px;border-radius:6px;font-weight:700;font-size:.85em">Space</span> or tap to play. Dodge the pillars, collect tickets!</p>
+  </div>
+  <div class="game-wrap" id="gameWrap">
+    <canvas id="flappyCanvas"></canvas>
+    <div class="game-score-bar">
+      <div class="score-pill">🏆 <span id="gScore">0</span></div>
+      <div class="score-pill tickets">🎟️ <span id="gTickets">0</span></div>
+    </div>
+    <button class="game-mute" id="gMute" aria-label="Mute">🔊</button>
+    <div class="game-overlay" id="gOverlay">
+      <div id="gStart">
+        <h3>Help Richie collect <em>tickets</em>!</h3>
+        <p>Press <span class="key">Space</span> or <span class="key">Tap</span> to flap and avoid the pillars.</p>
+        <button class="game-btn" id="gStartBtn">▶ Start game</button>
+      </div>
+      <div class="game-final" id="gOver">
+        <h3>Great flight! ✈️</h3>
+        <div class="row">
+          <div><strong id="fScore">0</strong><span>Score</span></div>
+          <div><strong id="fTickets">0</strong><span>Tickets</span></div>
+          <div><strong id="fBest">0</strong><span>Best</span></div>
+        </div>
+        <div class="game-cta-row">
+          <button class="game-btn" id="gRestart">↻ Play again</button>
+          <a class="ghost" href="#excursions" id="gBookReal">Book a real ticket →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEST SELLERS ============ -->
+<section class="bestsellers" id="bestsellers">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Most Booked This Month</span>
+        <h2>The <em>Best Sellers</em>.<br/>Loved by every traveller.</h2>
+      </div>
+      <p>Our top four experiences — high-octane on the water, off-road thrills and unforgettable views.</p>
+    </div>
+    <div class="bs-grid">
+      <div class="bs-card" data-name="Watersports Pack" data-price="49" data-video="BSd7KIU-mbM" data-image="images/jetski.jpg">
+        <div class="yt-bg" style="background-image:url('images/jetski.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/BSd7KIU-mbM?autoplay=1&mute=1&loop=1&playlist=BSd7KIU-mbM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Watersports Pack" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="badge">Best Seller</span>
+          <h3>Watersports</h3>
+          <div class="meta">
+            <span>Banana, Fly Fish, UFO</span>
+            <span class="price">from €24</span>
+          </div>
+        </div>
+      </div>
+      <div class="bs-card" data-name="Jet Ski Tour" data-price="180" data-video="BSd7KIU-mbM" data-image="images/jetski.jpg">
+        <div class="yt-bg" style="background-image:url('images/jetski.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/BSd7KIU-mbM?autoplay=1&mute=1&loop=1&playlist=BSd7KIU-mbM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Jet Ski Tour" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="badge">Adrenaline</span>
+          <h3>Jet Ski</h3>
+          <div class="meta">
+            <span>1 hour • 2 riders</span>
+            <span class="price">€180</span>
+          </div>
+        </div>
+      </div>
+      <div class="bs-card" data-name="Private Boat Charter" data-price="65" data-video="EMRPggX1vbs" data-image="images/private-charter.jpg">
+        <div class="yt-bg" style="background-image:url('images/private-charter.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/EMRPggX1vbs?autoplay=1&mute=1&loop=1&playlist=EMRPggX1vbs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Private Boat Charter" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="badge">Premium</span>
+          <h3>Private Boat</h3>
+          <div class="meta">
+            <span>Yachts from</span>
+            <span class="price">€65</span>
+          </div>
+        </div>
+      </div>
+      <div class="bs-card" data-name="Buggy Safari" data-price="89" data-video="OVj5WjtqyL0" data-image="images/buggy.jpg">
+        <div class="yt-bg" style="background-image:url('images/buggy.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/OVj5WjtqyL0?autoplay=1&mute=1&loop=1&playlist=OVj5WjtqyL0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Buggy Safari" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+        <div class="overlay"></div>
+        <div class="content">
+          <span class="badge">Off-road</span>
+          <h3>Buggy Safari</h3>
+          <div class="meta">
+            <span>3-hour adventure</span>
+            <span class="price">€89</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXCURSIONS ============ -->
+<section class="excursions" id="excursions">
+  <div class="excursions-bg">
+    <video autoplay muted loop playsinline preload="metadata" poster="images/trailer1-poster.jpg">
+      <source src="videos/trailer1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">All Excursions</span>
+        <h2>Pick your <em>adventure</em>.</h2>
+      </div>
+      <p>Filter by category and tap any tour to customise people, date and extras. Booking goes straight to WhatsApp.</p>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="land">Land</button>
+      <button data-filter="sea">Sea</button>
+      <button data-filter="air">Air</button>
+      <button data-filter="watersports">Watersports</button>
+    </div>
+
+    <div class="ex-grid" id="exGrid">
+      <!-- LAND -->
+      <article class="ex-card" data-cat="land" data-name="Teide & Masca Tour" data-price="79" data-video="6xjuGKX87lc" data-image="images/teide.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/teide.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/6xjuGKX87lc?autoplay=1&mute=1&loop=1&playlist=6xjuGKX87lc&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Teide & Masca Tour" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag hot">Top Rated</span>
+        </div>
+        <div class="ex-body">
+          <h3>Teide & Masca</h3>
+          <p class="desc">Full-day bus tour through the volcanic park, the cliffs of Los Gigantes and the magical Masca village.</p>
+          <div class="ex-meta">
+            <span>🚌 Full day</span>
+            <span>📍 Pickup included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€79<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="land" data-name="Buggy Safari" data-price="89">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/buggy.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/OVj5WjtqyL0?autoplay=1&mute=1&loop=1&playlist=OVj5WjtqyL0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Buggy Safari" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Off-road</span>
+        </div>
+        <div class="ex-body">
+          <h3>Buggy Safari</h3>
+          <p class="desc">Drive your own buggy through volcanic landscapes, dust trails and panoramic viewpoints. 3 hours of pure fun.</p>
+          <div class="ex-meta">
+            <span>⏱ 3 hours</span>
+            <span>👥 1–2 per buggy</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€89<small>/buggy</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- SEA -->
+      <article class="ex-card" data-cat="sea" data-name="Maxicat Catamaran" data-price="59" data-video="y0S6kC-bbl4" data-image="images/maxicat-1.jpg">
+        <div class="ex-media"><div class="maxicat-gallery" data-current="0">
+            <div class="mg-stage">
+              <div class="yt-bg" style="background-image:url('images/maxicat-1.jpg');background-size:cover;background-position:center;">
+                <iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/y0S6kC-bbl4?autoplay=1&mute=1&loop=1&playlist=y0S6kC-bbl4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Maxicat" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+                <div class="yt-shield"></div>
+              </div>
+              <img class="mg-img mg-img-active" src="images/maxicat-1.jpg" alt="Maxicat 1" data-idx="0">
+              <img class="mg-img" src="images/maxicat-2.jpg" alt="Maxicat 2" data-idx="1">
+              <img class="mg-img" src="images/maxicat-3.jpg" alt="Maxicat 3" data-idx="2">
+            </div>
+            <div class="mg-thumbs">
+              <button class="mg-thumb mg-thumb-active" data-idx="0" style="background-image:url('images/maxicat-1.jpg')"></button>
+              <button class="mg-thumb" data-idx="1" style="background-image:url('images/maxicat-2.jpg')"></button>
+              <button class="mg-thumb" data-idx="2" style="background-image:url('images/maxicat-3.jpg')"></button>
+            </div>
+          </div>
+          <span class="ex-tag">Family</span>
+        </div>
+        <div class="ex-body">
+          <h3>Maxicat Catamaran</h3>
+          <p class="desc">Spacious catamaran cruise with whale and dolphin spotting, swim stops, lunch and open bar onboard.</p>
+          <div class="ex-meta">
+            <span>⏱ 5 hours</span>
+            <span>🍽 Lunch + drinks</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€59<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="sea" data-name="Freebird Catamaran" data-price="62" data-video="Ie8726F4q_I" data-image="images/freebird.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/freebird.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/Ie8726F4q_I?autoplay=1&mute=1&loop=1&playlist=Ie8726F4q_I&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Freebird Catamaran" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">3 hours</span>
+        </div>
+        <div class="ex-body">
+          <h3>Freebird Catamaran</h3>
+          <p class="desc">Sleek 3-hour cruise with the Freebird fleet — whale watching, snorkelling stop and Canarian snacks.</p>
+          <div class="ex-meta">
+            <span>⏱ 3 hours</span>
+            <span>🐋 Whales guaranteed</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€62<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="sea" data-name="Yacht Charter" data-price="65" data-video="EMRPggX1vbs" data-image="images/private-charter.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/private-charter.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/EMRPggX1vbs?autoplay=1&mute=1&loop=1&playlist=EMRPggX1vbs&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Yacht Charter" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag new">Premium</span>
+        </div>
+        <div class="ex-body">
+          <h3>Private Yacht</h3>
+          <p class="desc">Step aboard a luxury private yacht. Skipper, music, swim stops and that unforgettable Atlantic sunset.</p>
+          <div class="ex-meta">
+            <span>⏱ 3 hours</span>
+            <span>👥 Up to 10</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€65<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="sea" data-name="Habana 1 Sailing" data-price="75" data-video="xrvIKdMTmZ8" data-image="images/masca.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/masca.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/xrvIKdMTmZ8?autoplay=1&mute=1&loop=1&playlist=xrvIKdMTmZ8&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Habana 1 Sailing" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Classic</span>
+        </div>
+        <div class="ex-body">
+          <h3>Habana 1</h3>
+          <p class="desc">Classic sailing experience aboard the iconic Habana 1 schooner. Whale spotting, paella, drinks and live atmosphere.</p>
+          <div class="ex-meta">
+            <span>⏱ 4.5 hours</span>
+            <span>🍽 Paella included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€75<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- WATERSPORTS -->
+      <article class="ex-card" data-cat="watersports" data-name="Jet Ski Tour" data-price="180">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/jetski.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/BSd7KIU-mbM?autoplay=1&mute=1&loop=1&playlist=BSd7KIU-mbM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Jet Ski Tour" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag hot">Adrenaline</span>
+        </div>
+        <div class="ex-body">
+          <h3>Jet Ski</h3>
+          <p class="desc">Take the throttle on a powerful jet ski and tear across the Atlantic. Solo or in pairs — 1 full hour out at sea.</p>
+          <div class="ex-meta">
+            <span>⏱ 1 hour</span>
+            <span>👥 1–2 per ski</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€180<small>/ski</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="watersports" data-name="Crazy UFO" data-price="24" data-video="wIAU5gq520M" data-image="images/flyfish.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/flyfish.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/wIAU5gq520M?autoplay=1&mute=1&loop=1&playlist=wIAU5gq520M&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Crazy UFO" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Group fun</span>
+        </div>
+        <div class="ex-body">
+          <h3>Crazy UFO</h3>
+          <p class="desc">Hold on tight! The wildest inflatable ride in Tenerife — get spun, splashed and launched off the waves.</p>
+          <div class="ex-meta">
+            <span>⏱ 15 min</span>
+            <span>👥 Group ride</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€24<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="watersports" data-name="Banana Boat" data-price="25" data-video="alpeP6YuTQA" data-image="images/banana.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/banana.jpg');background-size:cover;background-position:center;">
+            <iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/alpeP6YuTQA?autoplay=1&mute=1&loop=1&playlist=alpeP6YuTQA&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Banana Boat" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+            <div class="yt-shield"></div>
+          </div>
+          <span class="ex-tag">Family</span>
+        </div>
+        <div class="ex-body">
+          <h3>Banana Boat</h3>
+          <p class="desc">Classic inflatable banana boat ride — perfect group activity. Hold tight, get splashed and laugh non-stop. Suitable from age 6+.</p>
+          <div class="ex-meta">
+            <span>⏱ 15 min</span>
+            <span>👥 Up to 8</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€25<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="watersports" data-name="Fly Fish" data-price="30" data-video="l5BgHbe8kNQ" data-image="images/flyfish.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/flyfish.jpg');background-size:cover;background-position:center;">
+            <iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/l5BgHbe8kNQ?autoplay=1&mute=1&loop=1&playlist=l5BgHbe8kNQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Fly Fish" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+            <div class="yt-shield"></div>
+          </div>
+          <span class="ex-tag hot">Adrenaline</span>
+        </div>
+        <div class="ex-body">
+          <h3>Fly Fish</h3>
+          <p class="desc">The wildest inflatable! Get launched into the air on the fly fish — pure adrenaline as you skim and bounce off the waves.</p>
+          <div class="ex-meta">
+            <span>⏱ 15 min</span>
+            <span>👥 Up to 3</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€30<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="watersports" data-name="Kayak Tour" data-price="49" data-video="xXK5x-v7NQ0" data-image="images/kayak.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/kayak.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/xXK5x-v7NQ0?autoplay=1&mute=1&loop=1&playlist=xXK5x-v7NQ0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Kayak Tour" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Eco</span>
+        </div>
+        <div class="ex-body">
+          <h3>Kayak with Turtles</h3>
+          <p class="desc">Paddle through crystal waters, spot sea turtles and snorkel hidden coves. Guided by local instructors.</p>
+          <div class="ex-meta">
+            <span>⏱ 2.5 hours</span>
+            <span>🐢 Turtles likely</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€49<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- AIR -->
+      <article class="ex-card" data-cat="air" data-name="Parasailing" data-price="69" data-video="1YsVNJ0UzfQ" data-image="images/parasailing.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/parasailing.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/1YsVNJ0UzfQ?autoplay=1&mute=1&loop=1&playlist=1YsVNJ0UzfQ&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Parasailing" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Sky-high</span>
+        </div>
+        <div class="ex-body">
+          <h3>Parasailing</h3>
+          <p class="desc">Soar above the Atlantic with breathtaking views over Costa Adeje. Solo, double or triple flights available.</p>
+          <div class="ex-meta">
+            <span>⏱ 15 min flight</span>
+            <span>👥 1–3 riders</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€69<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="air" data-name="Paragliding 800m" data-price="129" data-video="TsKBpeImC7w" data-image="images/paragliding.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/paragliding.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/TsKBpeImC7w?autoplay=1&mute=1&loop=1&playlist=TsKBpeImC7w&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Paragliding 800m" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag new">800 m</span>
+        </div>
+        <div class="ex-body">
+          <h3>Paragliding 800 m</h3>
+          <p class="desc">Tandem paragliding flight from the iconic Ifonche launch — incredible views of the south coast.</p>
+          <div class="ex-meta">
+            <span>🛫 800 m takeoff</span>
+            <span>📸 Photos included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€129<small>/flight</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="air" data-name="Paragliding 1000m Merry" data-price="159" data-video="TsKBpeImC7w" data-image="images/paragliding.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/paragliding.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/TsKBpeImC7w?autoplay=1&mute=1&loop=1&playlist=TsKBpeImC7w&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Paragliding 1000m Merry" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag hot">Top flight</span>
+        </div>
+        <div class="ex-body">
+          <h3>Paragliding 1000 m Merry</h3>
+          <p class="desc">The ultimate flight — 1000 m of altitude, longer airtime and the chance to take the controls.</p>
+          <div class="ex-meta">
+            <span>🛫 1000 m takeoff</span>
+            <span>🎥 Video included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€159<small>/flight</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="land" data-name="Icod, Garachico & Masca" data-price="50" data-video="BG24Y4llESo" data-image="images/masca.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/masca.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/BG24Y4llESo?autoplay=1&mute=1&loop=1&playlist=BG24Y4llESo&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Icod Garachico Masca" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag new">New</span>
+        </div>
+        <div class="ex-body">
+          <h3>Icod, Garachico & Masca</h3>
+          <p class="desc">Discover the historic north of Tenerife — the millennial Drago tree of Icod, the picturesque village of Garachico and the unforgettable Masca cliffs.</p>
+          <div class="ex-meta">
+            <span>🚌 Full day</span>
+            <span>📍 Pickup included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€50<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="sea" data-name="Deep Sea Fishing" data-price="85" data-video="fZGXv2ycgt0" data-image="images/deepfishing.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/deepfishing.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/fZGXv2ycgt0?autoplay=1&mute=1&loop=1&playlist=fZGXv2ycgt0&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Deep Sea Fishing" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag hot">Catch big!</span>
+        </div>
+        <div class="ex-body">
+          <h3>Deep Sea Fishing</h3>
+          <p class="desc">Head out to deep waters and try your luck — tuna, marlin, dorado and more. All gear and experienced skipper included.</p>
+          <div class="ex-meta">
+            <span>⏱ 4 hours</span>
+            <span>🎣 Gear included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€85<small>/person</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="sea" data-name="Self Drive Boat" data-price="75" data-video="HY4-W1N-aY4" data-image="images/self-drive-boat.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/self-drive-boat.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/HY4-W1N-aY4?autoplay=1&mute=1&loop=1&playlist=HY4-W1N-aY4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Self Drive Boat" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag new">No license</span>
+        </div>
+        <div class="ex-body">
+          <h3>Self Drive Boat</h3>
+          <p class="desc">Be your own captain! No license required — drive a small boat along the coast at your own pace, with safety briefing included.</p>
+          <div class="ex-meta">
+            <span>⏱ 1 hour</span>
+            <span>👥 Up to 4</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€75<small>/boat</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="ex-card" data-cat="land" data-name="Stargazing Teide" data-price="75" data-video="Audje4Q7i94" data-image="images/stargazing.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/stargazing.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/Audje4Q7i94?autoplay=1&mute=1&loop=1&playlist=Audje4Q7i94&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Stargazing Teide" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+          <span class="ex-tag">Magical</span>
+        </div>
+        <div class="ex-body">
+          <h3>Stargazing Teide</h3>
+          <p class="desc">Tenerife has some of the clearest skies in the world. Enjoy a guided night observation from Mount Teide — telescopes and astronomer included.</p>
+          <div class="ex-meta">
+            <span>🌌 Evening</span>
+            <span>🔭 Telescopes</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€75<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+      <article class="ex-card" data-cat="land" data-name="Santa Cruz, La Laguna & Anaga" data-price="50" data-video="YmM8boaspTk" data-image="images/anaga.jpg">
+        <div class="ex-media">
+          <div class="yt-bg" style="background-image:url('images/anaga.jpg');background-size:cover;background-position:center;">
+            <iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/YmM8boaspTk?autoplay=1&mute=1&loop=1&playlist=YmM8boaspTk&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Santa Cruz, La Laguna & Anaga" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
+            <div class="yt-shield"></div>
+          </div>
+          <span class="ex-tag new">New</span>
+        </div>
+        <div class="ex-body">
+          <h3>Santa Cruz, La Laguna & Anaga</h3>
+          <p class="desc">Discover the heart of Tenerife — the colourful capital Santa Cruz, the UNESCO old town of La Laguna and the magical laurel forest of Anaga.</p>
+          <div class="ex-meta">
+            <span>🚌 Full day</span>
+            <span>📍 Pickup included</span>
+          </div>
+          <div class="ex-foot">
+            <span class="ex-price">€50<small>/adult</small></span>
+            <button class="ex-book">Book now</button>
+          </div>
+        </div>
+      </article>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARK TICKETS ============ -->
+<section class="parks" id="parks">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="label">Park Tickets</span>
+        <h2>Siam Park & <em>Loro Parque</em>.<br/>Save with the Twin Ticket.</h2>
+      </div>
+      <p>Official tickets to the world's #1 water park and the legendary animal park, including the unbeatable two-park combo.</p>
+    </div>
+    <div class="parks-grid">
+      <div class="park-card" data-name="Siam Park Ticket" data-price="45" data-video="FCJGCLrtYJE" data-image="images/siampark.jpg">
+        <div class="park-media"><div class="yt-bg" style="background-image:url('images/siampark.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/FCJGCLrtYJE?autoplay=1&mute=1&loop=1&playlist=FCJGCLrtYJE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Siam Park Ticket" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div></div><span class="ribbon">#1 Water Park in the World</span>
+        <h3>Siam Park</h3>
+        <p class="sub">Official 1-day adult ticket</p>
+        <div class="price-big">€45<small>/adult</small></div>
+        <ul>
+          <li>Tower of Power, Singha, Wave Palace</li>
+          <li>Free transfers from south Tenerife</li>
+          <li>Skip-the-queue entry</li>
+          <li>Child & family rates available</li>
+        </ul>
+        <button class="btn-primary park-book" style="background:white;color:var(--ink)">Book now →</button>
+      </div>
+
+      <div class="park-card featured" data-name="Twin Ticket (Siam + Loro)" data-price="78" data-video="FCJGCLrtYJE" data-image="images/siampark.jpg">
+        <div class="park-media"><div class="yt-bg" style="background-image:url('images/siampark.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/FCJGCLrtYJE?autoplay=1&mute=1&loop=1&playlist=FCJGCLrtYJE&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Twin Ticket (Siam + Loro)" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div></div><span class="ribbon">Best Value</span>
+        <h3>Twin Ticket</h3>
+        <p class="sub">Siam Park + Loro Parque combo</p>
+        <div class="price-big">€78<small>/adult</small></div>
+        <ul>
+          <li>Both parks — used on different days</li>
+          <li>Save vs buying separately</li>
+          <li>Valid for 14 days</li>
+          <li>Free transfers included</li>
+        </ul>
+        <button class="btn-primary park-book">Book now →</button>
+      </div>
+
+      <div class="park-card" data-name="Loro Parque Ticket" data-price="44" data-video="2v38REKNypc" data-image="images/loropark.jpg">
+        <div class="park-media"><div class="yt-bg" style="background-image:url('images/loropark.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/2v38REKNypc?autoplay=1&mute=1&loop=1&playlist=2v38REKNypc&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Loro Parque Ticket" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div></div><span class="ribbon">#1 Zoo in Europe</span>
+        <h3>Loro Parque</h3>
+        <p class="sub">Official 1-day adult ticket</p>
+        <div class="price-big">€44<small>/adult</small></div>
+        <ul>
+          <li>Orcas, dolphins, penguins, gorillas</li>
+          <li>Free transfers from south Tenerife</li>
+          <li>4 incredible live shows</li>
+          <li>Child & family rates available</li>
+        </ul>
+        <button class="btn-primary park-book" style="background:white;color:var(--ink)">Book now →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHALES & DOLPHINS ============ -->
+<section class="whales" id="whales">
+  <div class="whales-grid">
+    <div class="whales-text">
+      <span class="label" style="font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:10px;">Tenerife's Wild Side</span>
+      <h2>Whales & <em>Dolphins</em><br/>in their natural home.</h2>
+      <p>The waters off Tenerife are one of only two places in Europe where you can see whales year-round. Pilot whales, dolphins, and on lucky days even orcas.</p>
+      <div class="whales-options">
+        <div class="whale-opt" data-name="Maxicat Whale Watching" data-price="59" data-video="y0S6kC-bbl4" data-image="images/maxicat-1.jpg">
+          <strong>Maxicat</strong>
+          <span>5h • Lunch + drinks</span>
+          <span class="price">€59</span>
+        </div>
+        <div class="whale-opt" data-name="Freebird Whale Watching" data-price="62" data-video="Ie8726F4q_I" data-image="images/freebird.jpg">
+          <strong>Freebird</strong>
+          <span>3h • Snorkel stop</span>
+          <span class="price">€62</span>
+        </div>
+        <div class="whale-opt" data-name="Habana 1 Whale Sailing" data-price="75" data-video="xrvIKdMTmZ8" data-image="images/masca.jpg">
+          <strong>Habana 1</strong>
+          <span>4.5h • Paella + drinks</span>
+          <span class="price">€75</span>
+        </div>
+        <div class="whale-opt" data-name="Private Yacht Whale Watching" data-price="65" data-video="EMRPggX1vbs" data-image="images/private-charter.jpg">
+          <strong>Private Yacht</strong>
+          <span>3h • Up to 10 guests</span>
+          <span class="price">€65</span>
+        </div>
+      </div>
+      <a href="https://wa.me/447861305822?text=Hi%20Richie%2C%20I%27d%20like%20to%20book%20a%20whale%20%26%20dolphin%20tour" target="_blank" rel="noopener" class="btn-primary">Reserve via WhatsApp →</a>
+    </div>
+    <div class="whales-media">
+      <div class="yt-bg" style="background-image:url('images/whales.jpg');background-size:cover;background-position:center;"><iframe class="yt-iframe" src="https://www.youtube-nocookie.com/embed/yifc2_Yj3_4?autoplay=1&mute=1&loop=1&playlist=yifc2_Yj3_4&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0" title="Whales & Dolphins" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe><div class="yt-shield"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-head">
+      <span class="label">What our guests say</span>
+      <h2>Loved by travellers from <em>everywhere</em>.</h2>
+      <div class="reviews-rating">
+        <span class="big">4.9</span>
+        <div>
+          <div class="stars">★★★★★</div>
+          <span class="meta">Based on 1,200+ Google reviews</span>
+        </div>
+        <span class="google-badge">
+          <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          Google
+        </span>
+      </div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Booked the Teide & Masca tour through Richie — easiest WhatsApp booking ever. Driver was on time, views were unreal. The Masca village stop is a must!"</p>
+        <div class="author">
+          <div class="avatar" style="background:var(--orange-500)">SA</div>
+          <div><strong>Sarah A.</strong><span>United Kingdom • 2 weeks ago</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Jet ski hour and parasailing on the same day — Richie organised everything. The kids loved the banana boat too. Best day of our holiday in Tenerife!"</p>
+        <div class="author">
+          <div class="avatar" style="background:var(--aqua-500)">MK</div>
+          <div><strong>Marc K.</strong><span>Germany • 1 month ago</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Saw whales AND dolphins on the Freebird trip. Rich was super responsive on WhatsApp and got us a better price than the hotel offered. 100% recommend."</p>
+        <div class="author">
+          <div class="avatar" style="background:var(--ink)">JP</div>
+          <div><strong>Julie P.</strong><span>Ireland • 3 weeks ago</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Twin ticket for Siam + Loro was unbeatable value. Free transfers from our hotel in Las Americas. Smooth, professional and friendly."</p>
+        <div class="author">
+          <div class="avatar" style="background:var(--orange-600)">TH</div>
+          <div><strong>Thomas H.</strong><span>Netherlands • 1 week ago</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Buggy safari was wild — three hours of dust, laughs and incredible views. Richie picked us up from the apartment. Couldn't ask for better service."</p>
+        <div class="author">
+          <div class="avatar" style="background:var(--aqua-700)">EM</div>
+          <div><strong>Elena M.</strong><span>Spain • 2 months ago</span></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Paragliding 1000m flight was the highlight of our honeymoon! Booking via WhatsApp took two minutes. Already planning our next trip."</p>
+        <div class="author">
+          <div class="avatar" style="background:#7c3aed">DR</div>
+          <div><strong>David R.</strong><span>France • 3 months ago</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="footer-cta">
+  <h2>Ready for your Tenerife adventure?</h2>
+  <p>Message Richie directly on WhatsApp — quick replies, best prices, no booking fees.</p>
+  <a href="https://wa.me/447861305822" target="_blank" rel="noopener" class="btn-primary">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+    Chat on WhatsApp
+  </a>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-grid">
+    <div class="foot-col">
+      <a href="#" class="logo" style="color:white;margin-bottom:14px">
+        <span class="logo-mark" style="background-image:url('data:image/webp;base64,UklGRn4YAABXRUJQVlA4IHIYAACQWgCdASqgAKAAPlEijUSjoiEUqsakOAUEpXn1OpHk2jb5Rc1v/Tfj3lMzx2uP+d6vv0zvjPMz+1n7Ae8P6Wv8R6h39H/2PW6/tV7AHl2+z5/bvO+wSbkL+k8HfNb9C0S8i/ZnqO+BePfgP8uNQj8p/qfnMQ8HB3fn/g+kT+H52/w3qAcKtQC/T3pFaLvrb2D/1767fpIH+zcc2yiuBP+3BiB+pvjga/zDPhq2sGntv37jOpAtQ1jNp/8BkzGZrkqwdxuao8yRtMugZ2KWx2R64pBsXKXgdHbloa8GYPyJDfg9dbRsrk8+4sWG/tk98ifsGhOSDF6L6eJkWQPqu6tYdnz23gvtQK9piX7t12zlB5OPBxTDUPjjOrqyaBILtQQjDzwxJjCoLUmmTOPOayZdpBgzL3EImjSenzJuqARDm+xDkNyu6VWWVD0QV7dK3Tfh2Z+Tf7at6q3kFBltAkmRtru5yWqOCjAdL/8QtGI4NRpthLHb5wIxagtZR2Ss87lVvVOkCpd0gum8piQZ1GT4e2z+B2lTbBioN16zIsuJ6FALv1XFpelYv9hcKysVRJXVpCGXtJPKj+5jNvwgZqpe3NfejC5wiNmnnBxvhN/mH3V/QO6/UGxZsVOUreVF4Vf1qP7MKwA7oZBbW/Xvry2MY656xk8oOqspatH9WZCpTdHSx0m6O5PMaX0/ejgaWRIpZlEuonVKaYsbW4/HN0FTro4WiohN3OQiN63xr2h/frX3wwUP858V5feJRU5pv63HTfPrjC4eJkl+WHUCgnzT/VFGzMMUYqRVopnXuIzQ4WHfiL6OdPSsvehRldSgUceJIlJ3lqZax5gQuLbyeZHK0UvvTm1nHWZrFCmehsq+o3ZX713tI/n7vJIbEkriSIyz6nkA5Xo8q3O5LlrjNzXx7fe6eAUTf5c22m6Y6aWsAcRNr50D+x21wicVWH6AvlECrpjRMwQmpvPoPMrAAP78Q060w0Aah1Xm+9i3IRfobTUEIrc+0Hl43tL9zyZiaLXh/e5f2bkYcuj6MdK2E0GK2G/CrkcS1LYfr9XdG9nFNxs6vX1wD0LxsOdqRobPo+2elrOqy7ingVSA3VrQiCgn+56ppiGgInznjrwT6AA5TMRn30pZaBtS/a3UoOSe1WvnxzcvMnpwAKwti7i/iMl3lfl4zyijvAubfUJU9i/NFjlBox2h+8MifUoTWkW44Q14IXJVpieCyx7bzQRzjWAB3m9bJS+aylu/pQ2TmB9AuUrWEi1HA0kjVMOr8/FGhfIJtkp+f16KSZpVu3JD2OzEC/lVxRiFmuSPRAi8Kcw91vCfE2fB5NFX0lEY+/NvSl6GypZGhElpdnFb4i22uWv3+W/JswnaSoKtO8jT90Zarzmw7j3N2cjK65GuaQeFQgOtPWhRJUaIToGMO7pLMEUx+aLWTOWEoRdEiK+RfOSjMlDl0szv9R0NIRAlS3zP7qcu4heCsMfmURL5u6jAOb/Aildwx7UJOph43zbSjIckPlFXyIzxhby+ofOfrtBUfEql2etWuXSed4gl19keXIv1aQ3AbLp9gX5f2ffZFilJrzTQeIaE/bFS5ML0GLB9XWx/Wxaq2CynBcnE3FLMd920mpinYYjZJ9trWAOXOdxTTpdWWCG57BfBoMEIYfS74p8uCWTkkG2OlgDrj6Yw6hrXDMJ9CloGJfD4Xuavvkf0DG/H5KX9kKmVZZy49z/a13W4f9SliZPxF1Difhm751Ognlnw5f7NWV42ZPXmuuT//we8BOpnOpO5hpBudCNe4EcV6m+etBDHW5gabcmKYW7kYW+93uc/08v7atgDEVJ5scqaFqr7+uQreI9GhQfqpQyNZHVpdVjvQAuh+aYLGvfLQOW/wsdRhNAf3z1Y+jB9w9OYBNBvRVutbSDIZ9/Oe9jQvdO+mbHyHJ0nLfwNbfOrRrxcH8tmFfVueemHIyLYs+AOsMoDR4bdERzFauZ7NeslLSGa8SsNxV3j5PT45WSxSqIXfhndJmY7aU7kWuvtBevUpDbEvChFTH24Bq/xkeMnlh5oPS4BH7vdjIPCS0HezvAY5/aMJbBcn8/TUoKa/jTv3PdZd43Q9LiJGgswHfY1KHtPtZXNt7d9PX+RQs7Gic/AD7mXxK/PXr4oC46Vil23Cn5tFLgebo9jOxe/ydtBNJ867BKdWn6gD7BiDBth5QDmK0JBiTJspjcFBgAwL5nCvoE/lMmObWIqMoil72Dr2/+gNBj+9NVEl3Ogi6H1ioBKfATJK9M85b6Hb+CaPRD5k2V/1DKvy785WaFv/ji+upqDvywCiPR7e9eS/uWbhVGp2Vdc2f55TJaTx3ZUp1KDSUq683b2b7plMsl+JqLgiaf9jEMKQFl278gKRKvrY6PhbuK1nY44e5KstgCTmJkyQB+IC5dwK9ekBSLMnkoLUWi8MFbM1TSjVfNIAFaudnNWdNMUvCwMQN0KO7FXmyRX6wmC5kJpMe0j337YTF3EcQZO86j/V/hXPl+kl4aFjosCQ4elu++PreTznPabVNXZ+4ZnEo8064kMneVk431T88/4Z0IDwouV/8kD8e6LEf+82XV/Wi5Sa17kq3FczzmXmBKbAbStb1Dzuit/1vvmpvxr5rKzNq0dzcq/TUZtb5EWPlVMa9+IPA7S3eFZsEeZSSNsCdMeZK9Rgld27JTfRI6mDUF6dg/011FfBZMJXiB3wAK7Io64n+7/y3SnMvdniHcmKmjp1QbUysEXxQZttpeSCNINQWJRhgdsi6tanyAEWJDmoLdc0KKzrTcNNqUnV9Do3S/b1kl9nYroJjO30/8+0cVJq2p+IF93EuTOROEkI7Q66+pKbgcaSFHeIb+x80Kl91Kkske+wnI/Dk+vrt6pOJuQwn+diu/vODN36E+Pi+8MnkiKSqyTiFQadehltjlQaPmrkvCLnnxQ+7hmpFVruDIdjAINM7oBto67tChF7EbFF/T7pb13NKLu6K+o4SSvRDRZdFYr1xwPqwaSjXHnLETJxpOKKYy46V6ls12v0nRPzp4JedmlTRvYAWmBiKT+jPQTKHl0v5ZbUUIfUyWytpTIALdZ2DyzxHcPp+yzILwIM6ddW8eB2gq3FH1YTcyZJ9SM9Ht3RUxLrfF5ezl6zbzwhS2vWAo5In1TNHToD1ck37KaeVKkf8dW2dipJhFbDzvki3TvZB+FlFk8HNkd/5dHgNb3rmP20ri6mtsgvaZYeoARI96RK0LSwKSoDRQfWCzUI2pVt+SNS9RdlunE5l86QIfRH4Nu4FFy/txEfmaJ3K+zpok1El/wpY6MiNaeTYn+COW5g/3Xqh3W49bLXR5a3ppYaobh30BSoaV10IjdXyg0l6aGbi5jpQVrkrW7t7IcoAbl9rNoQiG8XqxcB/Mas2ADM9NefuqCO1R0njVhHmMBvxpoNz6feXjC02KIZOPmKXJTp2S9Q8jxGSwaml7xVayf0bPQYkDFuv040qJjNFr8+Fas/t3z6yYkpInPJvKPR4dKbkD4gqNtGDzGpfc5zsU7/rkApQsFOgnRcMcKbmGgbGu0grTQtZDVhyqDjHIvDgIQ+k0U0ZrmCPPDra+qs5EhqjiefY59XNUnUupqDdEFZdUzpt0nLNzATgqTIoKd5OWNzCduG996mOgpqDO7KJIZmyp+PNbPIF6EfN+Nvi1ikrMGknlaZQEIdWwCS10QebRpvBb8IXRwpdar+LgKqCLl2F9VkGLlNl8xu0eepN115NjkXzfm3+gT6i0An+QDZaOJq5ltVM+hAUfEY5bec6RWjW7UG71nTwwnYmnXWC1HjxFn5eUm39AypY0xJ4S50WNRTzq2Rzi7fWNvaAqLKNqP7Ngn3N9G5KiA1fp2bbq45WZFmdlEVZZB+KbzOyAxxIWXHfn7HxwLuEtzSoRnpshPHfHxwNafQgQ4fDBi7WIie4ivatSxJwP3lLZ3LJVKIskHqh8Rovp4lO7WJveYNONDXJuU20/UMTfquvXFW9p6MBTtdOLM8ZryR2QaAzQc1hyxjnQpxNTHqY/iD93H6Yv7dBHzan+0YM4cNFOFSLjVOIsNWXbYCWW8BemSi2LmlKAXmMtL2lABSlP7jP2Ijq/gCI+Gpl/LPy+/AIy2z/wuAcwA1W3Ee+KNgqDfkHlGzDWB0X8ig4UBOdYpR0SgiNvdUTEeRhhm0/h3ufkqeoA6hGX0hthpMZNmHZYtIrlYItpqneFeUi+Wd/6j+xH5WaohdqAzpXP/jBVZulD/kRkz8/8ZAE+rM3e8hlr8xd7Ni/cRO9Tn9z/zVBWdwICJLr07dUDi2D2EruwHUrqXWx67W8W+u+LpWwR/WEc5mBblpJL+HbbjQHIK47YNxER51eTfpjMxT5UEEfQL9x/OfGYXg0BX+7WmxNsRzn9t8R0FYtVXQdvEoqz7zsP967fmeYP7GLx3AiqYX+jrbg8lsYV5DQajrSSSnYpkrp64NC5MgdnQUN88WnWO5mCXP5Du17uMZ02kClBfIT8/RlhLc/gUHWEf0iP24CYqfF8bHj7FT/NgS3w7xHWzGah2M+xm3o65rynp0NcWx0YkIBLC2gRYRsjd/qRcACuDziNmR4Ra/Z1aqEsjpZ120C334h6f4y+vMrzF41Bqxz3dAX9jE+3ZC9oBaLnWvY/c5ncpgI8AIUO+yH750kFq0qzP8iBRO820p6x14MmAAif+myXYn2xBaV294NNUZR5w5XspJUUqt1Znz/DW2+93STNUbI9ImyKXTre6GvVx59ecBmuUO4VNyVorYEaxQiUEJ04vkyQWAyPMePbIpbblILdOgCsuQE+YgvZDA7QJurdg/TMvlwZXBtnFdUfibx4CQjiYjY9b5tNwXZZcvS7ZzU9DjJP9Iv/QgU+i5wUpLeid1/nNFW41yHY3tbCLRjxn1hNr5wVmPBhFvjqrN+ko+u+OHV6PBtO7KmgubF1KrDuogPrgpU3dOct3eWK2NAdLGv0pAtSPsSHO5Sbjz7YBgNePIScMVTnj+jpRxj9V7MGtkFyw0BS+NM9Qwa2HtQ42lcTrOMBkrZniTKVVR94f793PDmA5vfQngHR8jybeXBdYXwP6tvUw3CHDanFVwdAIVfhtmYDUF6pSzTr6DKfjnA+sJeXKay7YJpMB7Zgpb0f0Cob6Qk0Y/B+KPQRF9c0ojPfWNfXBQ9zNbyhUoYWLCRprCircPxgms4vXUGNfN2nSkmH/DiXFxGfb6l6QViFQ8/XbU5ReD1r9qlkS9utwvmEx9Nb1rDAvUuA8oZroJidG4pso98woqxvKB4jUwe2V+JnJOrBpzshCp3J91dhhfqw8tFxT1f5BiDG2Z5BhHpdqI/d/rpg1tZENQtY3w60j98HojjV04mW0GpGHmThGQgXaU5MH4FHGnrTeOwaaUY+EsE8VxKb3Gd/1wcCxRcNjX2hz4VMpxCjl9LyzhWSGcSr8M6FPyxwLVfjpe3fVVniMDqghr7dYgJdJ3MWIcwt4eR5a3G/jC2tUxlFezlkVBgw8WWwLMd3lpSjnpYEiuFmbhXRFywllyHdCzKL/tpgrp+TSLBzF58+YtcSdrXtHf044S7nGKd7WXQ0IpL3iihjEOOR/XXvTwAJop+gd3Xr+Rw+Uwn5NRknAMt6UoxF+wSEtxi+OHXbhpKOzh2Sr6jCCVWbPKNqCYmunydjcKEKR1/zuzeEbSyziLov2Zy2t55dl6oUpz3y8taUEjPVGf1B6P1wL/4DO4dSNIKovPdtI6tAOHYUuXeUEVzFXXEEObf3OMQ+w0TDNrfL1gnvl1exGAwMNMw2jJwaYkpXU/nHHjl2qsLSl00so9paLuCqCknP6BMQQR2H/3bLf/aaLohtsnyy/UbHBGqDimZVc/zgAWk9PcKUcroCBb0FZCtqBW31jRT380h9St2JC6p2EkyW7tHc+vnSA0jmaGIek6pjSpvVdkZ5SaRcu9+PzEU7kCKsyl9SMnVPgVe4SsuOGeMEH7Iug4UZUXNdpfD5g89t7Wgry5DnRuS6Ofu/a26YY6XmjjwZwgdoXS6QUIXPmNDH2RxUkJfeGyOmk6kOrTo2/VNTiXJsO6Wr8cVdFAPeFwCwt6+KGWntKXt9F3K0bz+qL5b+sVJL0oBG7wr88/HvtixpEjTy1SyDJ88CjctNVsTOc3Fy7dL6oNnFe9lTivfIpoQK+BarDPbuMwVhsHthAtTs7ts1IAYhiRM7h/whutoPycMvRPzDps7EV6g7DH3IcX3uES8nI52QAx6e6n8dHP6opPdHPM72p+LCx84UVKZAtWaZlBlnvgD+jgPzO6zVUeRxjk8jp4LhTspSn983qmygOrUncdl4JGMrr4ACoT/9xROlholyM+4/U9c4r6vF0IwKRPi0GijTYjDjbtIQ1sQfBk5t8tbDc2tg1/rqK7nyj5cqywwwSdWF8E36moGDvUHo8lUJZ5OwOvFYjG3is2v3OoC894luabn7iA3GUn5wFn1kF7cG2gN/KOYl01jVa2vEhyhm3+LU/4YyUXyDnVst842ET1RS8VeQZMkK4mwI9Z4GTizmtel7lv87jeohvy6LuwyNmsRqHA+JnR5pUexp7OFxoin1fHdPivh3P4BLZcIN1NmSo0R3KX92SfWZ2bmJeGnGIPwdv5/Vr/Kun3FoSVZR1WW22fRK3hurfKsavsO2qkF6d6CExRtTzA5gNofwQMa3OoGXg5EPxtymuLgewzqtzp0KC3zQqop6gXpW1T3Oxkwg+ahnoXTxZTB4vUFS9AnuFzLoyft8mvdbH7nGUjBsc9s463wiLIjmTKG3R5VDrZ9aWLsrCK0TBitGbVoVEVjHEu6xVz762znvOR7LXgGgSc1S6T6N7BKd+7O/C+e6rpYe34Y9v+6sfepg7QpCfR3h+mZi6/GgfPlKXIPlm+RFO5U2YNA3a7hrkrunMTXHk3J02Rf0BjcxYpQnsSEVLXwM3phAEmax54q8EJ4W/MkzY0vDCx+oBR/z9+8rEAR7MgjY6EEZzteYykNoXXKPOWq7/ddKFjt0s+3e6jQWy3NO2hkB8Dixa/jW9gcvwTnsHIs8ZcgkiKORjR7psFSaaOJm5a8cDZvBodg6ngYhDRUvlF2qAXQFjm4qjBNZf3nQzj7orOsKhuyKA9ywP4kizbUVlIOv6fXESzj2AWLpmmzWFBNtbkPjfHPE4glNB85ROEWWj5VgIDza/eULbOQKhmRj1RcnFSrY3ZpwwJ0119j9U0NK8aHUzy0HnVslX3HfuYgWLdNEEw0/QUaIjxrFp9XkKyt14iF1OODseV6sTrjTXHQNdjaxqswihP5rbdJ5kMzAnNdD23RaxfF+M/yR8X7joczwun5M45ySSOARU27RJpTxKa/7vj8yIb89ORLgk9/vC35XH4ObhXEWq3gD22Ny1Fzq8PUP/g0JV7fObEdVUCWmFqVyRF6yWYx2sC2SCnFMBtkJOYpFN1ZadxetqtRULu02JHblCrPqLYdzTlcUzIxjCyV2iaxmOR0GvwPh2DCOcHWwG9C9ytWpzOy1Ldr6HfRjizAkhIxqMJz5YfAy9BVd6+c8yfKjewGejVIIHF0+1qKbA4C+vZ/a8PAduiYCynygytozo9znEwIAeikaq3YeScdxH/qrdLfgwKmMfWg0yQm5rjB93VD4tTg/Q0iGoskBK4fYjoUEyOrTxuIUsGIf+FZ8yZgwQMtZSzaNFBI5nB3Sz7rNpkdL3YM+8F8lGUnVbc2+Tzi+cRMG346Xf9YwIpEZ02VRzrnQDs6ETUqZX6s+05VisFxxynXyXNp8gtctAh+PJkZU88vmNodm6fci2/58HGv1Zjv8qxDhSjn5Ri+44p0qbigavBXCLFHNa2MlK93/2C9cTkonfn/hUnYzOLO4eBs0TGR2KJLftukcS//9I59x42h4Dab0u3jawiD3RWeT2Ii3AWMLja6M8owtPMVMOqhadalFi///OTobPSFH3zEzbY4J0Wz7TGEcrN8Aq6nersbOHKHeaXB6QNiSWbscWW9azYx7IxTDWr5VdgtLZossRW+rwPbyuxJqCQQQiJk1PbFE2LqThEJeCqLG0JzzO/BdxtcAui900LrvbwGRtNwJI8E+wj4xpQmrb8T5/fMKf58nRaESoAp1o0KU/6tm6424DUgQz0ZmxyZMpxKUcrMiYNXyVKdngVGfaAFh7oG2i6qlv7LqBGf9mmkAVEcf9EtHP7HZe6Vs26gwg+LdbA4lQdrV5FguoQP+yL2rp0qvbS3St7WtS6jXxjZFY5+cB+jSf1Ncm9yMnJ+YsUFY8MFlxxbfOU03wQ0SsfVcD961ZMbVHQgeD8W/uO7IoZQ3Cl+1CkV/JhuPREX28CiF25hmYAAA=')" aria-label="Richie"></span>
+        <span class="logo-text">Tenerife Richie<small style="color:var(--orange-300)">Excursions</small></span>
+      </a>
+      <p>Your trusted local guide for the best excursions, watersports and park tickets in Tenerife. Book directly on WhatsApp — no fees, no fuss.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Excursions</h4>
+      <ul>
+        <li><a href="#bestsellers">Best Sellers</a></li>
+        <li><a href="#excursions">All Tours</a></li>
+        <li><a href="#whales">Whales & Dolphins</a></li>
+        <li><a href="#parks">Park Tickets</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>WhatsApp: +44 7861 305822</li>
+        <li>Costa Adeje, Tenerife</li>
+        <li>Open daily 8:00 – 22:00</li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Follow</h4>
+      <ul>
+        <li>Instagram</li>
+        <li>TikTok</li>
+        <li>Facebook</li>
+        <li>Google Reviews</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Tenerife Richie Excursions. All rights reserved.</span>
+    <span>Made with ☀️ in Tenerife</span>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="https://wa.me/447861305822" target="_blank" rel="noopener" class="float-wa" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+</a>
+
+<!-- ============ BOOKING MODAL ============ -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <div class="modal-video" id="mVideo"></div>
+    <div class="modal-head">
+      <div>
+        <h3 id="mTitle">Excursion</h3>
+        <span class="ex-price" id="mPrice">€0 <small>/person</small></span>
+      </div>
+      <button class="modal-close" id="mClose" aria-label="Close">×</button>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <label for="mDate">Pick a date</label>
+        <input type="date" id="mDate" />
+      </div>
+      <div class="field">
+        <label>People</label>
+        <div class="qty-row">
+          <div>
+            <span class="lbl">Adults</span>
+            <div class="qty">
+              <button data-qty="adults" data-step="-1">−</button>
+              <span class="num" id="qAdults">2</span>
+              <button data-qty="adults" data-step="1">+</button>
+            </div>
+          </div>
+          <div>
+            <span class="lbl">Children</span>
+            <div class="qty">
+              <button data-qty="children" data-step="-1">−</button>
+              <span class="num" id="qChildren">0</span>
+              <button data-qty="children" data-step="1">+</button>
+            </div>
+          </div>
+          <div>
+            <span class="lbl">Babies</span>
+            <div class="qty">
+              <button data-qty="babies" data-step="-1">−</button>
+              <span class="num" id="qBabies">0</span>
+              <button data-qty="babies" data-step="1">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="mPickup">Pickup hotel / area (optional)</label>
+        <input type="text" id="mPickup" placeholder="e.g. Costa Adeje, Hotel Bahia" />
+      </div>
+      <div class="total-row">
+        <span>Estimated total</span>
+        <strong id="mTotal">€0</strong>
+      </div>
+      <button class="btn-whatsapp" id="mBook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+        Reserve on WhatsApp
+      </button>
+      <p class="modal-note">You'll be redirected to WhatsApp with your booking details. No payment online — pay on the day.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Nav scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Filter tabs
+  document.querySelectorAll('.filter-tabs button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tabs button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('#exGrid .ex-card').forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+
+  // Booking modal
+  const WA_NUMBER = '447861305822';
+  const modal = document.getElementById('modal');
+  const mTitle = document.getElementById('mTitle');
+  const mPrice = document.getElementById('mPrice');
+  const mTotal = document.getElementById('mTotal');
+  const mDate = document.getElementById('mDate');
+  const mPickup = document.getElementById('mPickup');
+  const mBook = document.getElementById('mBook');
+  const mClose = document.getElementById('mClose');
+
+  let state = { name: '', price: 0, adults: 2, children: 0, babies: 0 };
+
+  // Set min date = today
+  mDate.min = new Date().toISOString().split('T')[0];
+
+  function openModal(name, price, videoId, imageUrl){
+    state.name = name;
+    state.price = parseFloat(price) || 0;
+    state.adults = 2; state.children = 0; state.babies = 0;
+    document.getElementById('qAdults').textContent = 2;
+    document.getElementById('qChildren').textContent = 0;
+    document.getElementById('qBabies').textContent = 0;
+    mDate.value = '';
+    mPickup.value = '';
+    mTitle.textContent = name;
+    mPrice.innerHTML = `€${state.price} <small>/person</small>`;
+    // Load modal video / poster
+    var mv = document.getElementById('mVideo');
+    if(videoId){
+      var src = 'https://www.youtube-nocookie.com/embed/'+videoId
+        + '?autoplay=1&mute=1&loop=1&playlist='+videoId
+        + '&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3&playsinline=1&disablekb=1&fs=0';
+      var bg = imageUrl ? 'background-image:url(\''+imageUrl+'\');background-size:cover;background-position:center;' : '';
+      mv.innerHTML = '<div class="placeholder" style="'+bg+'"></div><iframe src="'+src+'" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>';
+      mv.style.display = 'block';
+    } else if(imageUrl){
+      mv.innerHTML = '<div class="placeholder" style="background-image:url(\''+imageUrl+'\');background-size:cover;background-position:center;"></div>';
+      mv.style.display = 'block';
+    } else {
+      mv.innerHTML = '';
+      mv.style.display = 'none';
+    }
+    updateTotal();
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    // Stop the video by clearing the iframe
+    setTimeout(function(){ var mv = document.getElementById('mVideo'); if(mv) mv.innerHTML = ''; }, 300);
+  }
+  function updateTotal(){
+    // Adults and children pay full price; babies (in arms) are free
+    const total = (state.adults + state.children) * state.price;
+    mTotal.textContent = `€${total.toFixed(0)}`;
+  }
+  document.querySelectorAll('[data-qty]').forEach(b => {
+    b.addEventListener('click', () => {
+      const k = b.dataset.qty;
+      const step = parseInt(b.dataset.step,10);
+      state[k] = Math.max(k==='adults'?1:0, state[k] + step);
+      document.getElementById('q' + k.charAt(0).toUpperCase() + k.slice(1)).textContent = state[k];
+      updateTotal();
+    });
+  });
+  mClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+  // Open modal triggers
+  document.querySelectorAll('.ex-card').forEach(card => {
+    const btn = card.querySelector('.ex-book');
+    if(!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openModal(card.dataset.name, card.dataset.price, card.dataset.video, card.dataset.image);
+    });
+  });
+  document.querySelectorAll('.bs-card').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.name, card.dataset.price, card.dataset.video, card.dataset.image));
+  });
+  document.querySelectorAll('.park-card').forEach(card => {
+    const btn = card.querySelector('.park-book');
+    if(!btn) return;
+    btn.addEventListener('click', () => openModal(card.dataset.name, card.dataset.price, card.dataset.video, card.dataset.image));
+  });
+  document.querySelectorAll('.whale-opt').forEach(card => {
+    card.addEventListener('click', () => openModal(card.dataset.name, card.dataset.price, card.dataset.video, card.dataset.image));
+    card.style.cursor = 'pointer';
+  });
+
+  // Send to WhatsApp
+  mBook.addEventListener('click', () => {
+    const dateText = mDate.value ? mDate.value : 'to be confirmed';
+    const pickupText = mPickup.value ? mPickup.value : 'not specified';
+    const total = mTotal.textContent;
+    const msg =
+`Hi Richie! 👋
+I'd like to book the following excursion:
+
+🎯 *${state.name}*
+📅 Date: ${dateText}
+👥 Adults: ${state.adults}
+🧒 Children: ${state.children}
+👶 Babies: ${state.babies}
+📍 Pickup: ${pickupText}
+💰 Estimated total: ${total}
+
+Could you confirm availability? Thanks!`;
+    const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+    window.open(url, '_blank');
+  });
+
+  
+  // Maxicat gallery thumbnail switcher
+  document.querySelectorAll('.mg-thumb').forEach(function(t){
+    t.addEventListener('click', function(e){
+      e.stopPropagation();
+      var idx = parseInt(t.dataset.idx, 10);
+      var gallery = t.closest('.maxicat-gallery');
+      gallery.querySelectorAll('.mg-thumb').forEach(function(x){ x.classList.remove('mg-thumb-active'); });
+      t.classList.add('mg-thumb-active');
+      gallery.querySelectorAll('.mg-img').forEach(function(img){
+        img.classList.toggle('mg-img-active', parseInt(img.dataset.idx, 10) === idx);
+      });
+    });
+  });
+
+  // Mobile nav toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if(navToggle){
+    navToggle.addEventListener('click', () => {
+      const showing = navLinks.style.display === 'flex';
+      if(showing){
+        navLinks.style.display = '';
+      }else{
+        navLinks.style.display = 'flex';
+        navLinks.style.position = 'absolute';
+        navLinks.style.top = '100%';
+        navLinks.style.left = '0';
+        navLinks.style.right = '0';
+        navLinks.style.background = 'white';
+        navLinks.style.flexDirection = 'column';
+        navLinks.style.padding = '20px';
+        navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,.1)';
+      }
+    });
+  }
+</script>
+
+<script>
+(function(){
+  const FACE_SRC = 'data:image/webp;base64,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';
+
+  const canvas = document.getElementById('flappyCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const wrap = document.getElementById('gameWrap');
+  const overlay = document.getElementById('gOverlay');
+  const startEl = document.getElementById('gStart');
+  const overEl = document.getElementById('gOver');
+  const startBtn = document.getElementById('gStartBtn');
+  const restartBtn = document.getElementById('gRestart');
+  const scoreEl = document.getElementById('gScore');
+  const ticketsEl = document.getElementById('gTickets');
+  const fScore = document.getElementById('fScore');
+  const fTickets = document.getElementById('fTickets');
+  const fBest = document.getElementById('fBest');
+  const muteBtn = document.getElementById('gMute');
+  const section = document.getElementById('gameSection');
+
+  // Logical resolution — we render at this size and CSS scales it
+  const W = 1100, H = 481; // 16:7 ratio
+  function resize(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Load face
+  const face = new Image();
+  face.src = FACE_SRC;
+  let faceReady = false;
+  face.onload = ()=>{ faceReady = true; };
+
+  // Game state
+  const state = {
+    mode: 'idle', // idle | playing | dead
+    bird: { x: 180, y: H/2, vy: 0, r: 32 },
+    gravity: 0.38,
+    flap: -7.0,
+    maxFall: 9, // terminal velocity, prevents brutal drops
+    pipes: [],
+    tickets: [],
+    speed: 2.8,
+    spawn: 0,
+    spawnEvery: 120, // frames between pipe pairs (lower = more frequent)
+    gap: 220, // gap height between top/bottom pipe (higher = easier)
+    score: 0,
+    tickets_count: 0,
+    best: parseInt(localStorage.getItem('richieBest')||'0',10) || 0,
+    bestTickets: parseInt(localStorage.getItem('richieBestT')||'0',10) || 0,
+    frame: 0,
+    muted: false
+  };
+  fBest.textContent = state.best;
+
+  // ===== Audio (tiny WebAudio bleeps, no files) =====
+  let audioCtx = null;
+  function bleep(freq, dur, type, vol){
+    if(state.muted) return;
+    try{
+      if(!audioCtx) audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = type || 'square';
+      o.frequency.value = freq;
+      g.gain.value = vol || 0.05;
+      o.connect(g); g.connect(audioCtx.destination);
+      o.start();
+      g.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + (dur||0.1));
+      o.stop(audioCtx.currentTime + (dur||0.1));
+    }catch(e){}
+  }
+  function sFlap(){ bleep(420, 0.08, 'square', 0.04); }
+  function sCoin(){ bleep(880, 0.08, 'triangle', 0.06); setTimeout(()=>bleep(1320,0.10,'triangle',0.05),60); }
+  function sHit(){ bleep(140, 0.25, 'sawtooth', 0.07); }
+  function sPoint(){ bleep(660, 0.06, 'sine', 0.04); }
+
+  // ===== Helpers =====
+  function reset(){
+    state.bird.y = H/2;
+    state.bird.vy = 0;
+    state.pipes = [];
+    state.tickets = [];
+    state.spawn = 0;
+    state.score = 0;
+    state.tickets_count = 0;
+    state.frame = 0;
+    state.speed = 2.8;
+    state.spawnEvery = 120;
+    state.gap = 220;
+    scoreEl.textContent = 0;
+    ticketsEl.textContent = 0;
+  }
+
+  function start(){
+    reset();
+    state.mode = 'playing';
+    overlay.classList.add('hidden');
+    startEl.style.display='block';
+    overEl.classList.remove('show');
+  }
+
+  function gameOver(){
+    state.mode = 'dead';
+    sHit();
+    if(state.score > state.best){ state.best = state.score; localStorage.setItem('richieBest', state.best); }
+    if(state.tickets_count > state.bestTickets){ state.bestTickets = state.tickets_count; localStorage.setItem('richieBestT', state.bestTickets); }
+    fScore.textContent = state.score;
+    fTickets.textContent = state.tickets_count;
+    fBest.textContent = state.best;
+    startEl.style.display = 'none';
+    overEl.classList.add('show');
+    overlay.classList.remove('hidden');
+  }
+
+  function flap(){
+    if(state.mode === 'idle'){ start(); }
+    if(state.mode !== 'playing') return;
+    state.bird.vy = state.flap;
+    sFlap();
+  }
+
+  function spawnPair(){
+    const gap = state.gap; // gap height — shrinks as game progresses
+    const minTop = 60;
+    const maxTop = H - gap - 60;
+    const topH = minTop + Math.random() * (maxTop - minTop);
+    const x = W + 30;
+    state.pipes.push({ x, topH, gap, passed:false });
+    // Maybe spawn a ticket inside the gap
+    if(Math.random() < 0.7){
+      const ty = topH + gap/2 + (Math.random()*40 - 20);
+      state.tickets.push({ x: x + 26, y: ty, taken:false, bob: Math.random()*Math.PI*2 });
+    }
+  }
+
+  // ===== Drawing =====
+  function drawClouds(){
+    // soft cloud streaks
+    ctx.save();
+    ctx.globalAlpha = 0.5;
+    for(let i=0;i<5;i++){
+      const cx = ((state.frame*0.4 + i*260) % (W+200)) - 100;
+      const cy = 60 + i*30 % 120;
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, 60, 16, 0, 0, Math.PI*2);
+      ctx.ellipse(cx+30, cy-8, 40, 12, 0, 0, Math.PI*2);
+      ctx.fill();
+    }
+    ctx.restore();
+  }
+
+  function drawGround(){
+    // Sand strip
+    const groundH = 36;
+    ctx.fillStyle = '#ffd9a8';
+    ctx.fillRect(0, H - groundH, W, groundH);
+    // Wave hatching
+    ctx.fillStyle = '#ffc483';
+    for(let i=0;i<W;i+=18){
+      const off = (state.frame * state.speed) % 18;
+      ctx.fillRect(i - off, H - groundH + 8, 10, 4);
+    }
+  }
+
+  function drawPipe(p){
+    const w = 64;
+    // Pipe body — palm-tree-trunk vibe in aqua/teal
+    const grad = ctx.createLinearGradient(p.x, 0, p.x + w, 0);
+    grad.addColorStop(0, '#0e7490');
+    grad.addColorStop(0.5, '#0891b2');
+    grad.addColorStop(1, '#0e7490');
+    ctx.fillStyle = grad;
+    // Top pipe
+    ctx.fillRect(p.x, 0, w, p.topH);
+    // Top cap
+    ctx.fillStyle = '#06b6d4';
+    ctx.fillRect(p.x - 4, p.topH - 14, w + 8, 14);
+    // Bottom pipe
+    const bottomY = p.topH + p.gap;
+    ctx.fillStyle = grad;
+    ctx.fillRect(p.x, bottomY, w, H - 36 - bottomY);
+    // Bottom cap
+    ctx.fillStyle = '#06b6d4';
+    ctx.fillRect(p.x - 4, bottomY, w + 8, 14);
+  }
+
+  function drawTicket(t){
+    if(t.taken) return;
+    ctx.save();
+    const bobY = t.y + Math.sin((state.frame + t.bob*30) * 0.12) * 4;
+    ctx.translate(t.x, bobY);
+    ctx.rotate(Math.sin(state.frame * 0.08) * 0.08);
+    // Ticket body
+    const w = 40, h = 26;
+    ctx.fillStyle = '#ff7a18';
+    ctx.strokeStyle = '#c2410c';
+    ctx.lineWidth = 2;
+    // rounded rect with notches in the middle (perforation)
+    ctx.beginPath();
+    const r = 5;
+    ctx.moveTo(-w/2 + r, -h/2);
+    ctx.lineTo(-3, -h/2);
+    ctx.arc(-3, -h/2 + 3, 3, -Math.PI/2, Math.PI/2, false);
+    ctx.lineTo(3, -h/2);
+    ctx.lineTo(w/2 - r, -h/2);
+    ctx.quadraticCurveTo(w/2, -h/2, w/2, -h/2 + r);
+    ctx.lineTo(w/2, h/2 - r);
+    ctx.quadraticCurveTo(w/2, h/2, w/2 - r, h/2);
+    ctx.lineTo(3, h/2);
+    ctx.arc(3, h/2 - 3, 3, Math.PI/2, -Math.PI/2, false);
+    ctx.lineTo(-3, h/2);
+    ctx.lineTo(-w/2 + r, h/2);
+    ctx.quadraticCurveTo(-w/2, h/2, -w/2, h/2 - r);
+    ctx.lineTo(-w/2, -h/2 + r);
+    ctx.quadraticCurveTo(-w/2, -h/2, -w/2 + r, -h/2);
+    ctx.fill();
+    ctx.stroke();
+    // Star icon
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 14px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('★', -10, 0);
+    // small text
+    ctx.fillStyle = 'white';
+    ctx.font = 'bold 8px sans-serif';
+    ctx.fillText('TICKET', 8, 0);
+    ctx.restore();
+  }
+
+  function drawBird(){
+    const b = state.bird;
+    // Tilt with velocity
+    const tilt = Math.max(-0.5, Math.min(1.0, b.vy * 0.06));
+    ctx.save();
+    ctx.translate(b.x, b.y);
+    ctx.rotate(tilt);
+    // Shadow circle behind
+    ctx.beginPath();
+    ctx.arc(2, 4, b.r + 2, 0, Math.PI*2);
+    ctx.fillStyle = 'rgba(0,0,0,0.18)';
+    ctx.fill();
+    // Clip face into a circle
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(0, 0, b.r, 0, Math.PI*2);
+    ctx.closePath();
+    ctx.clip();
+    if(faceReady){
+      ctx.drawImage(face, -b.r, -b.r, b.r*2, b.r*2);
+    }else{
+      ctx.fillStyle = '#ffd479';
+      ctx.fillRect(-b.r, -b.r, b.r*2, b.r*2);
+    }
+    ctx.restore();
+    // Border ring
+    ctx.beginPath();
+    ctx.arc(0, 0, b.r, 0, Math.PI*2);
+    ctx.lineWidth = 3;
+    ctx.strokeStyle = '#ffffff';
+    ctx.stroke();
+    ctx.lineWidth = 1.5;
+    ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+    ctx.stroke();
+    // Tiny "wing" — a flowery shirt collar wedge under the chin
+    ctx.beginPath();
+    ctx.moveTo(-b.r * 0.6, b.r * 0.6);
+    ctx.quadraticCurveTo(-b.r * 1.4, b.r * 0.4 + Math.sin(state.frame*0.3)*4, -b.r * 1.2, b.r * 1.0);
+    ctx.lineTo(-b.r * 0.4, b.r * 0.9);
+    ctx.closePath();
+    ctx.fillStyle = '#ff7a18';
+    ctx.fill();
+    ctx.restore();
+  }
+
+  function step(){
+    state.frame++;
+    // Background
+    ctx.clearRect(0,0,W,H);
+    // Sky already via CSS gradient on wrap, but draw a soft top haze too:
+    const g = ctx.createLinearGradient(0,0,0,H);
+    g.addColorStop(0, 'rgba(122,215,240,0)');
+    g.addColorStop(1, 'rgba(255,217,168,0)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,W,H);
+    drawClouds();
+
+    if(state.mode === 'playing'){
+      // Physics
+      state.bird.vy += state.gravity;
+      if(state.bird.vy > state.maxFall) state.bird.vy = state.maxFall;
+      state.bird.y += state.bird.vy;
+
+      // Spawn pipes
+      state.spawn++;
+      if(state.spawn >= state.spawnEvery){
+        state.spawn = 0;
+        spawnPair();
+      }
+
+      // Move + score pipes
+      for(const p of state.pipes){
+        p.x -= state.speed;
+        if(!p.passed && p.x + 64 < state.bird.x){
+          p.passed = true;
+          state.score++;
+          scoreEl.textContent = state.score;
+          sPoint();
+          // Progressive difficulty — every 3 points, ramp up gradually
+          if(state.score % 3 === 0){
+            state.speed = Math.min(state.speed + 0.18, 5.5);
+            state.spawnEvery = Math.max(state.spawnEvery - 5, 75);
+            state.gap = Math.max(state.gap - 8, 150);
+          }
+        }
+      }
+      state.pipes = state.pipes.filter(p => p.x + 64 > -10);
+
+      // Tickets
+      for(const t of state.tickets){
+        if(t.taken) continue;
+        t.x -= state.speed;
+        const dx = t.x - state.bird.x;
+        const dy = t.y - state.bird.y;
+        if(dx*dx + dy*dy < (state.bird.r + 16) * (state.bird.r + 16)){
+          t.taken = true;
+          state.tickets_count++;
+          ticketsEl.textContent = state.tickets_count;
+          sCoin();
+        }
+      }
+      state.tickets = state.tickets.filter(t => !t.taken && t.x > -30);
+
+      // Collisions: ground / ceiling
+      if(state.bird.y + state.bird.r > H - 36){ state.bird.y = H - 36 - state.bird.r; gameOver(); }
+      if(state.bird.y - state.bird.r < 0){ state.bird.y = state.bird.r; state.bird.vy = 0; }
+
+      // Collisions with pipes (circle-rect)
+      for(const p of state.pipes){
+        if(state.bird.x + state.bird.r > p.x && state.bird.x - state.bird.r < p.x + 64){
+          if(state.bird.y - state.bird.r < p.topH || state.bird.y + state.bird.r > p.topH + p.gap){
+            gameOver();
+            break;
+          }
+        }
+      }
+    } else if(state.mode === 'idle'){
+      // gentle floating bird
+      state.bird.y = H/2 + Math.sin(state.frame * 0.06) * 12;
+    }
+
+    // Draw pipes + tickets behind bird
+    for(const p of state.pipes) drawPipe(p);
+    for(const t of state.tickets) drawTicket(t);
+
+    drawGround();
+    drawBird();
+
+    requestAnimationFrame(step);
+  }
+  step();
+
+  // ===== Input =====
+  function input(e){
+    // Only react when section is reasonably in view
+    const rect = section.getBoundingClientRect();
+    const inView = rect.bottom > 100 && rect.top < window.innerHeight - 100;
+    if(e && e.code === 'Space'){
+      if(!inView) return; // don't hijack space scroll when section not visible
+      e.preventDefault();
+      if(state.mode === 'dead') start();
+      else flap();
+    }
+  }
+  window.addEventListener('keydown', input);
+  // tap on canvas
+  function tap(e){
+    e.preventDefault();
+    if(state.mode === 'dead') start();
+    else flap();
+  }
+  wrap.addEventListener('mousedown', tap);
+  wrap.addEventListener('touchstart', tap, {passive:false});
+
+  startBtn.addEventListener('click', (e)=>{ e.stopPropagation(); start(); });
+  restartBtn.addEventListener('click', (e)=>{ e.stopPropagation(); start(); });
+
+  muteBtn.addEventListener('click', (e)=>{
+    e.stopPropagation();
+    state.muted = !state.muted;
+    muteBtn.textContent = state.muted ? '🔇' : '🔊';
+  });
+
+  // Auto-collapse the section after the user has scrolled well past it
+  let dismissed = false;
+  window.addEventListener('scroll', ()=>{
+    if(dismissed) return;
+    const rect = section.getBoundingClientRect();
+    // When section's bottom is well above the viewport (user scrolled past ~half a screen), hide it
+    if(rect.bottom < -window.innerHeight * 0.5){
+      section.classList.add('dismissed');
+      dismissed = true;
+      // pause game if running
+      if(state.mode === 'playing'){ state.mode = 'idle'; reset(); overlay.classList.remove('hidden'); }
+    }
+  }, {passive:true});
+
+})();
+</script>
+
+</body>
+</html>
